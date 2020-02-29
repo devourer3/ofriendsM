@@ -1,3 +1,26 @@
 <resources>
   <string name="app_name">OfriendsMobile</string>
+
+  <string name="home" translatable="false">홈</string>
+  <string name="like" translatable="false">좋아요</string>
+  <string name="ofriends" translatable="false">내 오프렌즈</string>
+  <string name="more" translatable="false">더보기</string>
+
+  <string translatable="false" name="toolbar_search_hint">프렌즈 검색하기</string>
+
+  <string translatable="false" name="main_awesome">멋진</string>
+  <string translatable="false" name="main_life">라이프</string>
+
+  <!-- TODO: Remove or change this placeholder text -->
+  <string name="prd" translatable="false">프로덕트입니다.</string>
+
+
+
+  <string name="W0001">전체 보기</string>
+
+
+
+  <string name="S0001">지금 뜨는 라이프</string>
+
+
 </resources>

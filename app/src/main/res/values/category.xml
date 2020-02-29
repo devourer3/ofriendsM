@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="categoryName">
+        <item>
+            놀기
+        </item>
+        <item>
+            배우기
+        </item>
+        <item>
+            함께하기
+        </item>
+    </string-array>
+    <string-array name="categoryImage">
+        <item>
+            cat_0
+        </item>
+        <item>
+            cat_1
+        </item>
+        <item>
+            cat_2
+        </item>
+    </string-array>
+</resources>

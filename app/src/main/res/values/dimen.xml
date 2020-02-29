@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="sub_subject">18dp</dimen>
+    <dimen name="catch_phrase">8dp</dimen>
+    <dimen name="title">10dp</dimen>
+    <dimen name="price">12dp</dimen>
+</resources>

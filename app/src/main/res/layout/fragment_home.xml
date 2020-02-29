@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".MainActivity">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tVAwesome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="18dp"
+                android:text="@string/main_awesome"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tVLife"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="18dp"
+                android:text="@string/main_life"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@id/tVAwesome"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--  <androidx.viewpager.widget.ViewPager-->
+            <!--    android:id="@+id/vPMainBanner"-->
+            <!--    android:layout_width="0dp"-->
+            <!--    android:layout_height="180dp"-->
+            <!--    android:layout_marginTop="20dp"-->
+            <!--    app:layout_constraintLeft_toLeftOf="parent"-->
+            <!--    app:layout_constraintRight_toRightOf="parent"-->
+            <!--    app:layout_constraintTop_toBottomOf="@id/tVAwesome" />-->
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/vPMainBanner"
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tVAwesome" />
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tLIndicator"
+                android:layout_width="0dp"
+                android:layout_height="24dp"
+                android:background="@color/color_ececec"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vPMainBanner"
+                app:tabBackground="@drawable/tab_indicator_dot"
+                app:tabGravity="center"
+                app:tabIndicatorFullWidth="false"
+                app:tabIndicatorHeight="0dp"
+                app:tabPadding="4dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rVCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tLIndicator"
+                app:spanCount="3" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tVRisingLife"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/S0001"
+                android:textColor="@color/color_000000"
+                android:textSize="@dimen/sub_subject"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rVCategory" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tVRiseEntire"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/W0001"
+                app:layout_constraintBottom_toTopOf="@id/rVRisingLife"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rVCategory" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rVRisingLife"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tVRisingLife"
+                app:spanCount="2" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

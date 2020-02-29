@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="risingLife"
+            type="com.gibeom.ofriendsmobile.home.data.RisingLife" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cLRiEntire"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iVRiImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:radiusImageFromUrl="@{risingLife.image_link}"
+            app:layout_constraintDimensionRatio="1:0.75"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/like"
+            android:button="@null"
+            android:checked="false"
+            app:layout_constraintRight_toRightOf="@id/iVRiImage"
+            app:layout_constraintTop_toTopOf="@id/iVRiImage" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tVRiCatchPhrase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/noto"
+            android:text="@{risingLife.catchPhrase}"
+            android:textColor="@color/color_b1b1b1"
+            android:textSize="@dimen/catch_phrase"
+            app:layout_constraintLeft_toLeftOf="@id/iVRiImage"
+            app:layout_constraintTop_toBottomOf="@id/iVRiImage" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tVRiTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/noto"
+            android:text="@{risingLife.title}"
+            android:textColor="@color/color_212121"
+            android:textSize="@dimen/title"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/tVRiCatchPhrase"
+            app:layout_constraintTop_toBottomOf="@id/tVRiCatchPhrase" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tVRiPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/noto"
+            android:text="@{risingLife.price}"
+            android:textColor="@color/color_212121"
+            android:textSize="@dimen/price"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/tVRiTitle"
+            app:layout_constraintTop_toBottomOf="@id/tVRiTitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
