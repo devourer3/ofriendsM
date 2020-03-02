@@ -22,7 +22,6 @@ class BannerPagerAdapter(
       setOnClickListener {
         Timber.d("%s번째 아이템 클릭", position)
       }
-
       bindImageFromUrl(view.iVBanners, banners?.get(position)?.image_mobile ?: "")
       container.addView(view)
       //      return instantiateItem(container, position)

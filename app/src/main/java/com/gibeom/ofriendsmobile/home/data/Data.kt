@@ -1,5 +1,7 @@
 package com.gibeom.ofriendsmobile.home.data
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import com.google.gson.annotations.SerializedName
 
 data class Main(
@@ -109,3 +111,13 @@ data class Magazines(
   val image_desktop: String,
   @SerializedName("image_mobile")
   val image_mobile: String)
+
+data class LifeCategory(
+  @SerializedName("id")
+  val id: Int,
+  @SerializedName("title")
+  val title:String,
+  @SerializedName("filter")
+  val filter:String,
+  var selected: MutableLiveData<Boolean> = MutableLiveData(false)
+)

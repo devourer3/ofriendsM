@@ -9,5 +9,4 @@
         android:name="com.gibeom.ofriendsmobile.like.ui.LikeFragment"
         android:label="@string/main_life"
         tools:layout="@layout/fragment_like" />
-
 </navigation>

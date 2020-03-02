@@ -1,19 +1,12 @@
 package com.gibeom.ofriendsmobile.home.data
 
 import android.app.Application
-import android.content.Context
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.liveData
-import com.gibeom.ofriendsmobile.OfriendsApp
 import com.gibeom.ofriendsmobile.R
-import com.gibeom.ofriendsmobile.api.Result
-import com.gibeom.ofriendsmobile.api.resultNetworkData
 import com.gibeom.ofriendsmobile.api.resultNetworkLiveData
-import com.gibeom.ofriendsmobile.utils.rawJsonToObject
+import com.gibeom.ofriendsmobile.utils.rawJsonToList
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.coroutineScope
-import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 class HomeRepository
@@ -29,12 +22,28 @@ class HomeRepository
     remoteDataSource.getMainData()
   })
 
+  fun observeFilteredPrd(range:String, query:String) = resultNetworkLiveData(networkCall = {
+    remoteDataSource.getPrdData(range, query)
+  })
 
-  fun getCategory(): LiveData<MutableList<Category>> {
+  // https://developer.android.com/topic/libraries/architecture/coroutines
+  fun getAweSomeCategory(): LiveData<MutableList<Category>> {
     return liveData(Dispatchers.IO) {
-      emit(rawJsonToObject(context, R.raw.cat, "category", Category::class.java))
+      emit(rawJsonToList(context, R.raw.cat, "category", Category::class.java))
     }
   }
+
+  fun getLifeCategory(jsonKey: String): LiveData<MutableList<LifeCategory>> {
+    return liveData(Dispatchers.IO) {
+      emit(rawJsonToList(context, R.raw.life_cat, jsonKey, LifeCategory::class.java))
+    }
+  }
+
+//  fun getLifeCategory(arrayNo:Int): LiveData<MutableList<String>> {
+//    return liveData(Dispatchers.IO) {
+//      emit(context.resources.getStringArray(arrayNo).toMutableList())
+//    }
+//  }
 
 }
 

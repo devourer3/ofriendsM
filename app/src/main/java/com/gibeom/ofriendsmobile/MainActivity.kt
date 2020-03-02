@@ -2,11 +2,13 @@ package com.gibeom.ofriendsmobile
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.SimpleAdapter
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.navigation.NavController
 import androidx.navigation.ui.*
+import androidx.recyclerview.widget.RecyclerView
 import com.gibeom.ofriendsmobile.utils.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.android.DispatchingAndroidInjector
@@ -73,8 +75,7 @@ class MainActivity : AppCompatActivity(), HasSupportFragmentInjector {
     private fun setupBottomNavigationBar() {
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_nav)
 
-//        val navGraphIds = listOf(R.navigation.ofriends, R.navigation.list, R.navigation.form)
-        val navGraphIds = listOf(R.navigation.home, R.navigation.like, R.navigation.ofriends, R.navigation.more)
+        val navGraphIds = listOf(R.navigation.home, R.navigation.like, R.navigation.more)
 
         // Setup the bottom navigation view with a list of navigation graphs
         val controller = bottomNavigationView.setupWithNavController(

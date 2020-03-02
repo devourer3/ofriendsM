@@ -35,6 +35,7 @@ fun <T, T1> resultLiveData(
 }
 
 fun <T> resultNetworkLiveData(networkCall: suspend () -> Result<T>): LiveData<Result<T>> =
+    // https://developer.android.com/topic/libraries/architecture/coroutines
     liveData(Dispatchers.IO) {
         emit(Result.loading())
         val responseStatus = networkCall.invoke()

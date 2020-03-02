@@ -34,12 +34,6 @@ class RisingLifeAdapter : ListAdapter<RisingLife, RisingLifeAdapter.ViewHolder>(
             }
         }
     }
-
-
-
-
-
-
 }
 
 private class RisingLifeDiffCallback : DiffUtil.ItemCallback<RisingLife>() {

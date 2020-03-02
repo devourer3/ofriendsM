@@ -10,4 +10,9 @@ constructor(private val service: OfriendsService) : BaseDataSource() {
   suspend fun getMainData() = getResult {
     service.getMain()
   }
+
+  suspend fun getPrdData(range:String, query:String) = getResult {
+   service.getFilteredProduct(range, query)
+  }
+
 }

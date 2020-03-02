@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
+        <import type="android.view.View"/>
         <variable
             name="risingLife"
             type="com.gibeom.ofriendsmobile.home.data.RisingLife" />
@@ -71,6 +71,7 @@
             android:layout_marginTop="6dp"
             android:fontFamily="@font/noto"
             android:text="@{risingLife.price}"
+            android:visibility='@{risingLife.price == "0" ? View.GONE : View.VISIBLE}'
             android:textColor="@color/color_212121"
             android:textSize="@dimen/price"
             android:textStyle="bold"

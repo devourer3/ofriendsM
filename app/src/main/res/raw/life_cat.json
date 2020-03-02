@@ -1,0 +1,48 @@
+{
+  "play_sub_cat": [
+    {
+      "id": 0,
+      "title": "먹거리",
+      "filter": "food"
+    },
+    {
+      "id": 1,
+      "title": "건강/운동",
+      "filter": "sports"
+    },
+    {
+      "id": 2,
+      "title": "체험/관람",
+      "filter": "experience"
+    }
+  ],
+  "learn_sub_cat": [
+    {
+      "id": 0,
+      "title": "재테크",
+      "filter": "money"
+    },
+    {
+      "id": 1,
+      "title": "공예DIY",
+      "filter": "craft"
+    },
+    {
+      "id": 2,
+      "title": "음악/미술",
+      "filter": "art"
+    },
+    {
+      "id": 3,
+      "title": "건강/뷰티",
+      "filter": "beauty"
+    }
+  ],
+  "share_sub_cat": [
+    {
+      "id": 0,
+      "title": "키즈&맘",
+      "filter": "kids"
+    }
+  ]
+}

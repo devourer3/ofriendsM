@@ -9,7 +9,7 @@ import timber.log.Timber
 import java.util.*
 import kotlin.reflect.KClass
 
-fun <T> rawJsonToObject(
+fun <T> rawJsonToList(
     ctx: Context,
     rawFile: Int,
     jsonKey: String,

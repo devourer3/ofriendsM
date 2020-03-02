@@ -4,4 +4,6 @@
     <dimen name="catch_phrase">8dp</dimen>
     <dimen name="title">10dp</dimen>
     <dimen name="price">12dp</dimen>
+    <dimen name="second_sub">16dp</dimen>
+    <dimen name="third_sub">12dp</dimen>
 </resources>
