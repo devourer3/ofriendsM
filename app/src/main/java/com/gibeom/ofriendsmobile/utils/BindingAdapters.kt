@@ -1,14 +1,17 @@
 package com.gibeom.ofriendsmobile.utils
 
-import android.annotation.SuppressLint
 import android.content.res.Resources
 import android.graphics.Color
 import android.graphics.Typeface
 import android.text.method.LinkMovementMethod
 import android.view.View
 import android.widget.ImageView
+import android.widget.ProgressBar
 import android.widget.TextView
+import androidx.annotation.IdRes
 import androidx.appcompat.widget.AppCompatTextView
+import androidx.core.content.ContextCompat
+import androidx.core.content.res.ResourcesCompat
 import androidx.core.text.HtmlCompat
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.load.MultiTransformation
@@ -18,7 +21,8 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.gibeom.ofriendsmobile.GlideApp
 import com.gibeom.ofriendsmobile.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import javax.inject.Inject
+import timber.log.Timber
+import java.text.DecimalFormat
 
 // https://medium.com/@joongwon/android-aac%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-mvvm-%ED%8C%A8%ED%84%B4-e24a685fc25d
 
@@ -41,23 +45,40 @@ fun bindIsGone(view: FloatingActionButton, isGone: Boolean?) {
     }
 }
 
+@BindingAdapter("isLoading")
+fun bindLoading(view: ProgressBar, status: String? = "LOADING") {
+    view.visibility = if (status == "LOADING") {
+        View.VISIBLE
+    } else {
+        View.GONE
+    }
+}
+
 @BindingAdapter("imageFromUrl")
 fun bindImageFromUrl(view: ImageView, imageUrl: String?) {
     if (!imageUrl.isNullOrEmpty()) {
         GlideApp.with(view.context)
             .load(imageUrl)
-            .transition(DrawableTransitionOptions.withCrossFade())
+            .apply {
+                placeholder(R.drawable.ic_placeholder).error(R.drawable.profile)
+            }
+//            .transition(DrawableTransitionOptions.withCrossFade())
             .into(view)
     }
 }
 
-@BindingAdapter("radiusImageFromUrl")
-fun bindRadiusImageFromUrl(view: ImageView, imageUrl: String?) {
-    if (!imageUrl.isNullOrEmpty()) {
+@BindingAdapter("radiusImageFromUrl", "radiusValue", requireAll = false)
+fun bindRadiusImageFromUrl(view: ImageView, radiusImageFromUrl: String?, radiusValue: Int = 20) {
+    radiusImageFromUrl?.let {
         GlideApp.with(view.context)
-            .load(imageUrl)
-            .transform(MultiTransformation(CenterCrop(), RoundedCorners(20)))
-            .transition(DrawableTransitionOptions.withCrossFade())
+            .load(it)
+            .apply {
+                placeholder(R.drawable.ic_placeholder).error(R.drawable.profile)
+                    .transform(RoundedCorners(radiusValue))
+            }
+            .transform(MultiTransformation(CenterCrop(), RoundedCorners(radiusValue)))
+            // https://github.com/bumptech/glide/issues/3195
+//            .transition(DrawableTransitionOptions.withCrossFade())
             .into(view)
     }
 }
@@ -104,4 +125,17 @@ fun bindRenderHtml(view: TextView, description: String?) {
     } else {
         view.text = ""
     }
+}
+
+@BindingAdapter("formatName", "formatText", requireAll = false)
+fun bindTextFormat(view: TextView, formatName: String?, formatText: Any) {
+    val res: Resources = view.context.resources
+    val format = res.getIdentifier(formatName, "string", view.context.packageName)
+    view.text = view.context.getString(format, formatText.toString())
+}
+
+@BindingAdapter("setMoney")
+fun bindSetMoney(view: AppCompatTextView, value: Int) {
+    val decimalFormat = DecimalFormat("###,###")
+    view.text = view.context.getString(R.string.money, decimalFormat.format(value))
 }

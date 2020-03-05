@@ -1,13 +1,8 @@
 package com.gibeom.ofriendsmobile.utils
 
 import android.content.Context
-import com.gibeom.ofriendsmobile.R
-import com.gibeom.ofriendsmobile.home.data.Category
 import com.google.gson.Gson
 import org.json.JSONObject
-import timber.log.Timber
-import java.util.*
-import kotlin.reflect.KClass
 
 fun <T> rawJsonToList(
     ctx: Context,

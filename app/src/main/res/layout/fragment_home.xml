@@ -5,115 +5,125 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <import type="android.view.View" />
-
         <variable
             name="homeVm"
             type="com.gibeom.ofriendsmobile.home.ui.HomeViewModel" />
     </data>
 
-    <androidx.core.widget.NestedScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/aBHome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:context=".MainActivity">
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <com.google.android.material.appbar.AppBarLayout
-                android:id="@+id/appbar"
+            <include
+                android:id="@+id/main_toolbar"
+                layout="@layout/toolbar_home" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/aBHome">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                android:layout_height="match_parent">
 
-                <include
-                    android:id="@+id/main_toolbar"
-                    layout="@layout/toolbar_main" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tVAwesome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="18dp"
+                    android:onClick="@{() -> homeVm.setSelectedTab(0)}"
+                    android:text="@string/main_awesome"
+                    android:textSize="18dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:textStyle='@{homeVm.selectedTab == 0 ? "bold" : "normal"}' />
 
-            </com.google.android.material.appbar.AppBarLayout>
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tVAwesome"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="18dp"
-                android:onClick="@{() -> homeVm.setSelectedTab(0)}"
-                android:text="@string/main_awesome"
-                android:textSize="18dp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/appbar"
-                app:textStyle='@{homeVm.selectedTab == 0 ? "bold" : "normal"}' />
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/iVAwesomeDot"
-                android:layout_width="8dp"
-                android:layout_height="8dp"
-                android:layout_marginTop="4dp"
-                android:background="@drawable/awesome_indicator_dot_selected"
-                android:visibility="@{homeVm.selectedTab == 0 ? View.VISIBLE : View.GONE}"
-                app:layout_constraintLeft_toLeftOf="@id/tVAwesome"
-                app:layout_constraintRight_toRightOf="@id/tVAwesome"
-                app:layout_constraintTop_toBottomOf="@id/tVAwesome" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tVLife"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:onClick="@{() -> homeVm.setSelectedTab(1)}"
-                android:text="@string/main_life"
-                android:textSize="18dp"
-                app:layout_constraintBottom_toBottomOf="@id/tVAwesome"
-                app:layout_constraintLeft_toRightOf="@id/tVAwesome"
-                app:layout_constraintTop_toTopOf="@id/tVAwesome"
-                app:textStyle='@{homeVm.selectedTab == 1 ? "bold" : "normal"}' />
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/iVLifeDot"
-                android:layout_width="8dp"
-                android:layout_height="8dp"
-                android:layout_marginTop="4dp"
-                android:background="@drawable/awesome_indicator_dot_selected"
-                android:visibility="@{homeVm.selectedTab == 1 ? View.VISIBLE : View.GONE}"
-                app:layout_constraintLeft_toLeftOf="@id/tVLife"
-                app:layout_constraintRight_toRightOf="@id/tVLife"
-                app:layout_constraintTop_toBottomOf="@id/tVLife" />
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="12dp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/iVAwesomeDot">
-
-                <include
-                    android:id="@+id/iCawesome"
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iVAwesomeDot"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/awesome_indicator_dot_selected"
                     android:visibility="@{homeVm.selectedTab == 0 ? View.VISIBLE : View.GONE}"
-                    layout="@layout/awesome" />
+                    app:layout_constraintLeft_toLeftOf="@id/tVAwesome"
+                    app:layout_constraintRight_toRightOf="@id/tVAwesome"
+                    app:layout_constraintTop_toBottomOf="@id/tVAwesome" />
 
-                <include
-                    android:id="@+id/iCLife"
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tVLife"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:onClick="@{() -> homeVm.setSelectedTab(1)}"
+                    android:text="@string/main_life"
+                    android:textSize="18dp"
+                    app:layout_constraintBottom_toBottomOf="@id/tVAwesome"
+                    app:layout_constraintLeft_toRightOf="@id/tVAwesome"
+                    app:layout_constraintTop_toTopOf="@id/tVAwesome"
+                    app:textStyle='@{homeVm.selectedTab == 1 ? "bold" : "normal"}' />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iVLifeDot"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/awesome_indicator_dot_selected"
                     android:visibility="@{homeVm.selectedTab == 1 ? View.VISIBLE : View.GONE}"
-                    layout="@layout/life" />
+                    app:layout_constraintLeft_toLeftOf="@id/tVLife"
+                    app:layout_constraintRight_toRightOf="@id/tVLife"
+                    app:layout_constraintTop_toBottomOf="@id/tVLife" />
 
-            </FrameLayout>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iVAwesomeDot">
 
-            <!--  <androidx.viewpager.widget.ViewPager-->
-            <!--    android:id="@+id/vPMainBanner"-->
-            <!--    android:layout_width="0dp"-->
-            <!--    android:layout_height="180dp"-->
-            <!--    android:layout_marginTop="20dp"-->
-            <!--    app:layout_constraintLeft_toLeftOf="parent"-->
-            <!--    app:layout_constraintRight_toRightOf="parent"-->
-            <!--    app:layout_constraintTop_toBottomOf="@id/tVAwesome" />-->
+                    <include
+                        android:id="@+id/iCawesome"
+                        layout="@layout/awesome"
+                        android:visibility="@{homeVm.selectedTab == 0 ? View.VISIBLE : View.GONE}" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.core.widget.NestedScrollView>
+                    <include
+                        android:id="@+id/iCLife"
+                        layout="@layout/life"
+                        android:visibility="@{homeVm.selectedTab == 1 ? View.VISIBLE : View.GONE}" />
+
+                </FrameLayout>
+
+                <!--  <androidx.viewpager.widget.ViewPager-->
+                <!--    android:id="@+id/vPMainBanner"-->
+                <!--    android:layout_width="0dp"-->
+                <!--    android:layout_height="180dp"-->
+                <!--    android:layout_marginTop="20dp"-->
+                <!--    app:layout_constraintLeft_toLeftOf="parent"-->
+                <!--    app:layout_constraintRight_toRightOf="parent"-->
+                <!--    app:layout_constraintTop_toBottomOf="@id/tVAwesome" />-->
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

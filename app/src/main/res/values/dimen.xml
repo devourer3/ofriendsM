@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="toolbar_title">16dp</dimen>
     <dimen name="sub_subject">18dp</dimen>
     <dimen name="catch_phrase">8dp</dimen>
     <dimen name="title">10dp</dimen>
     <dimen name="price">12dp</dimen>
     <dimen name="second_sub">16dp</dimen>
     <dimen name="third_sub">12dp</dimen>
+
+    <dimen name="detail_catchPhrase">12dp</dimen>
+    <dimen name="detail_title">20dp</dimen>
+    <dimen name="detail_price">20dp</dimen>
+    <dimen name="detail_desc">12dp</dimen>
+    <dimen name="detail_idx">12dp</dimen>
 </resources>

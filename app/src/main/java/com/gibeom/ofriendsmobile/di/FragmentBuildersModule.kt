@@ -1,6 +1,8 @@
 package com.gibeom.ofriendsmobile.di
 
 import com.gibeom.ofriendsmobile.home.ui.HomeFragment
+import com.gibeom.ofriendsmobile.home.ui.ProductDetailFragment
+import com.gibeom.ofriendsmobile.home.ui.PromoFragment
 import com.gibeom.ofriendsmobile.like.ui.LikeFragment
 import com.gibeom.ofriendsmobile.more.ui.MoreFragment
 import dagger.Module
@@ -18,5 +20,11 @@ abstract class FragmentBuildersModule {
 
     @ContributesAndroidInjector
     abstract fun contributeMoreFragment(): MoreFragment
+
+    @ContributesAndroidInjector
+    abstract fun contributePromoFragment(): PromoFragment
+
+    @ContributesAndroidInjector
+    abstract fun contributeProductDetailFragment(): ProductDetailFragment
 
 }

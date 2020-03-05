@@ -6,14 +6,12 @@
         <item>건강/운동</item>
         <item>체험/관람</item>
     </string-array>
-
     <string-array name="life_cat_2">
         <item>재테크</item>
         <item>공예DIY</item>
         <item>음악/미술</item>
         <item>건강/뷰티</item>
     </string-array>
-
     <string-array name="life_cat_3">
         <item>키즈&amp;맘</item>
     </string-array>
@@ -28,14 +26,28 @@
     <string name="main_awesome" translatable="false">멋진</string>
     <string name="main_life" translatable="false">라이프</string>
 
+    <string name="money">%s 원</string>
+
     <string name="W0001">전체 보기</string>
     <string name="W0002">놀기</string>
     <string name="W0003">배우기</string>
     <string name="W0004">함께하기</string>
     <string name="W0005">정렬</string>
-
+    <string name="W0006">호스트</string>
+    <string name="W0007">참여하기</string>
+    <string name="W0008">호스트 후기</string>
+    <string name="W0009">라이프 소개</string>
 
     <string name="S0001">지금 뜨는 라이프</string>
+    <string name="S0002">%s명이 좋아한 라이프</string>
+    <string name="S0003">유효기간 구매일로부터 %s일</string>
+    <string name="S0004">오프렌즈 평점 %s</string>
+    <string name="S0005">%s개 후기 모두 보기</string>
+    <string name="S0006">지금 뜨는 라이프 %s</string>
+    <string name="S0007">유효기간 구매일로부터 90일</string>
+
+
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

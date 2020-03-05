@@ -1,5 +1,6 @@
-package com.gibeom.ofriendsmobile.api
+package com.gibeom.ofriendsmobile.data.remote
 
+import com.gibeom.ofriendsmobile.data.Result
 import retrofit2.Response
 import timber.log.Timber
 
@@ -11,10 +12,11 @@ abstract class BaseDataSource {
     try {
       val response = call()
       if (response.isSuccessful) {
+        val headers = response.headers()
         val body = response.body()
-        if (body != null) return Result.success(body)
+        if (body != null) return Result.success(body, headers)
       }
-      return error(" ${response.code()} ${response.message()}")
+      return error("CODE(${response.code()}): ${response.message()}")
     } catch (e: Exception) {
       return error(e.message ?: e.toString())
     }

@@ -1,0 +1,98 @@
+{
+  "banners": [
+    {
+      "id": 10,
+      "type": "internal",
+      "name": "event_product_6",
+      "link": "/event/6",
+      "image_link": "https://static.ofriends.co.kr/images/banners/10_flute_d.jpg",
+      "image_desktop": "https://static.ofriends.co.kr/images/banners/10_flute_d.jpg",
+      "image_mobile": "https://static.ofriends.co.kr/images/banners/10_flute_m.jpg"
+    },
+    {
+      "id": 4,
+      "type": "external",
+      "name": "launching exhibit 1",
+      "link": "https://static.ofriends.co.kr/exhibits/1_launching_event/index.html",
+      "image_link": "https://static.ofriends.co.kr/images/banners/4_launching_d.jpg",
+      "image_desktop": "https://static.ofriends.co.kr/images/banners/4_launching_d.jpg",
+      "image_mobile": "https://static.ofriends.co.kr/images/banners/4_launching_m.jpg"
+    },
+    {
+      "id": 3,
+      "type": "internal",
+      "name": "signup event 2",
+      "link": "/event/2",
+      "image_link": "https://static.ofriends.co.kr/images/banners/3_signup_d_old.jpg",
+      "image_desktop": "https://static.ofriends.co.kr/images/banners/3_signup_d_old.jpg",
+      "image_mobile": "https://static.ofriends.co.kr/images/banners/3_signup_m_old.jpg"
+    },
+    {
+      "id": 8,
+      "type": "internal",
+      "name": "event_product_5",
+      "link": "/event/5",
+      "image_link": "https://static.ofriends.co.kr/images/banners/8_sharon_d.jpg",
+      "image_desktop": "https://static.ofriends.co.kr/images/banners/8_sharon_d.jpg",
+      "image_mobile": "https://static.ofriends.co.kr/images/banners/8_sharon_m.jpg"
+    }
+  ],
+  "products": [
+    {
+      "id": 126393,
+      "frip_type": "ticket",
+      "title": "마음챙김 명상",
+      "catch_phrase": "스트레스 관리",
+      "price": 10000,
+      "original_price": 10000,
+      "rating": 0,
+      "location": "서울 강남구 역삼동 테헤란로 318 3층 회의실",
+      "is_hot": 0,
+      "is_only": 0,
+      "is_new": 0,
+      "like": 0
+    },
+    {
+      "id": 126391,
+      "frip_type": "ticket",
+      "title": "오! Dynamic Futsal League (ODFL)",
+      "catch_phrase": "매달 중순께 열리는 다이나믹한 풋살 리그",
+      "price": 3000,
+      "original_price": 3000,
+      "rating": 0,
+      "location": "서울시 강남구 도곡동 산21 중대부고 풋살장",
+      "is_hot": 0,
+      "is_only": 0,
+      "is_new": 0,
+      "like": 0
+    },
+    {
+      "id": 126385,
+      "frip_type": "ticket",
+      "title": "sky 명랑골프",
+      "catch_phrase": "실력과 상관없이 명랑골프를 추구하는 스크린골프 및 정기라운딩 모임",
+      "price": 35000,
+      "original_price": 35000,
+      "rating": 0,
+      "location": "서울특별시 강남구 역삼2동 언주로81길 8 지하1층",
+      "is_hot": 0,
+      "is_only": 0,
+      "is_new": 0,
+      "like": 0
+    },
+    {
+      "id": 126390,
+      "frip_type": "ticket",
+      "title": "노블레스펜싱클럽",
+      "catch_phrase": "이태리 귀족 스포츠이며 \"팡트\"란  펜싱에서 찌르다라는 의미 입니다",
+      "price": 30000,
+      "original_price": 30000,
+      "rating": 0,
+      "location": "대구 북구",
+      "is_hot": 0,
+      "is_only": 0,
+      "is_new": 0,
+      "like": 0
+    }
+  ]
+}

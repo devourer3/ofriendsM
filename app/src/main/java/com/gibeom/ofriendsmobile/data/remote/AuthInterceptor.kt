@@ -1,4 +1,4 @@
-package com.gibeom.ofriendsmobile.api
+package com.gibeom.ofriendsmobile.data.remote
 
 import okhttp3.Interceptor
 import okhttp3.Response

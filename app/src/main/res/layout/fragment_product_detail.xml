@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="vMDetail"
+            type="com.gibeom.ofriendsmobile.home.ui.ProductDetailViewModel" />
+        <variable
+            name="productInfo"
+            type="com.gibeom.ofriendsmobile.home.data.ProductInfo" />
+
+        <import type="androidx.core.content.ContextCompat"/>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/iCToolbar"
+            layout="@layout/toolbar_navigate" />
+
+        <WebView
+            android:id="@+id/wVEvent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gLToolbar" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gLToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="56dp" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scVDetail"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gLToolbar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".home.ui.ProductDetailFragment">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/gLLeftMargin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.03" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/gLRightMargin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.97" />
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/vPDetailBanner"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintDimensionRatio="h, 1:0.72"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tVDeCatchPhrase"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="start"
+                    android:textSize="@dimen/detail_catchPhrase"
+                    android:text="@{productInfo.catch_phrase}"
+                    android:textColor="@color/color_b1b1b1"
+                    app:layout_constraintLeft_toLeftOf="@id/gLLeftMargin"
+                    app:layout_constraintRight_toRightOf="@id/gLRightMargin"
+                    app:layout_constraintTop_toBottomOf="@id/vPDetailBanner" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tVDeTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@color/color_212121"
+                    android:textSize="@dimen/detail_title"
+                    android:textStyle="bold"
+                    android:text="@{productInfo.title}"
+                    app:layout_constraintLeft_toLeftOf="@id/gLLeftMargin"
+                    app:layout_constraintRight_toRightOf="@id/gLRightMargin"
+                    app:layout_constraintTop_toBottomOf="@id/tVDeCatchPhrase" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tVDePrice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:textColor="@color/color_ff6600"
+                    app:setMoney="@{productInfo.price}"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/detail_price"
+                    app:layout_constraintLeft_toLeftOf="@id/gLLeftMargin"
+                    app:layout_constraintRight_toRightOf="@id/gLRightMargin"
+                    app:layout_constraintTop_toBottomOf="@id/tVDeTitle" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iVBorder1"
+                    android:layout_width="0dp"
+                    android:layout_height="1.5dp"
+                    android:layout_marginTop="22dp"
+                    android:background="@color/color_e6e6e6"
+                    app:layout_constraintLeft_toLeftOf="@id/gLLeftMargin"
+                    app:layout_constraintRight_toRightOf="@id/gLRightMargin"
+                    app:layout_constraintTop_toBottomOf="@id/tVDePrice" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iVLike"
+                    android:layout_width="0dp"
+                    android:layout_height="16dp"
+                    android:layout_marginTop="22dp"
+                    app:imageFromUrl='@{"https://gibeomport.s3.ap-northeast-2.amazonaws.com/portimage/android/ofriends/detail_like.png"}'
+                    app:layout_constraintDimensionRatio="h, 1:1"
+                    app:layout_constraintLeft_toLeftOf="@id/gLLeftMargin"
+                    app:layout_constraintTop_toBottomOf="@id/iVBorder1" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tVLike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    app:formatName='@{"S0002"}'
+                    app:formatText="@{productInfo.likes}"
+                    app:layout_constraintBottom_toBottomOf="@id/iVLike"
+                    app:layout_constraintLeft_toRightOf="@id/iVLike"
+                    app:layout_constraintTop_toTopOf="@id/iVLike" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iVSche"
+                    android:layout_width="0dp"
+                    android:layout_height="16dp"
+                    android:layout_marginTop="12dp"
+                    app:imageFromUrl='@{"https://gibeomport.s3.ap-northeast-2.amazonaws.com/portimage/android/ofriends/detail_calendar.png"}'
+                    app:layout_constraintDimensionRatio="h, 1:1"
+                    app:layout_constraintLeft_toLeftOf="@id/gLLeftMargin"
+                    app:layout_constraintTop_toBottomOf="@id/iVLike" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tVSche"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/S0007"
+                    app:layout_constraintBottom_toBottomOf="@id/iVSche"
+                    app:layout_constraintLeft_toRightOf="@id/iVSche"
+                    app:layout_constraintTop_toTopOf="@id/iVSche" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iVLoc"
+                    android:layout_width="0dp"
+                    android:layout_height="16dp"
+                    android:layout_marginTop="12dp"
+                    app:imageFromUrl='@{"https://gibeomport.s3.ap-northeast-2.amazonaws.com/portimage/android/ofriends/detail_location.png"}'
+                    app:layout_constraintDimensionRatio="h, 1:1"
+                    app:layout_constraintLeft_toLeftOf="@id/gLLeftMargin"
+                    app:layout_constraintTop_toBottomOf="@id/iVSche" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tVLoc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@{productInfo.location}"
+                    app:layout_constraintBottom_toBottomOf="@id/iVLoc"
+                    app:layout_constraintLeft_toRightOf="@id/iVLoc"
+                    app:layout_constraintTop_toTopOf="@id/iVLoc" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iVStar"
+                    android:layout_width="0dp"
+                    android:layout_height="16dp"
+                    android:layout_marginTop="12dp"
+                    app:imageFromUrl='@{"https://gibeomport.s3.ap-northeast-2.amazonaws.com/portimage/android/ofriends/detail_star.png"}'
+                    app:layout_constraintDimensionRatio="h, 1:1"
+                    app:layout_constraintLeft_toLeftOf="@id/gLLeftMargin"
+                    app:layout_constraintTop_toBottomOf="@id/iVLoc" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tVStar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    formatName='@{"S0004"}'
+                    formatText="@{productInfo.rating}"
+                    app:layout_constraintBottom_toBottomOf="@id/iVStar"
+                    app:layout_constraintLeft_toRightOf="@id/iVStar"
+                    app:layout_constraintTop_toTopOf="@id/iVStar" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iVBorder2"
+                    android:layout_width="0dp"
+                    android:layout_height="1.5dp"
+                    android:layout_marginTop="22dp"
+                    android:background="@color/color_e6e6e6"
+                    app:layout_constraintLeft_toLeftOf="@id/gLLeftMargin"
+                    app:layout_constraintRight_toRightOf="@id/gLRightMargin"
+                    app:layout_constraintTop_toBottomOf="@id/iVStar" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tVHost"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="start"
+                    android:text="@string/W0006"
+                    app:layout_constraintLeft_toLeftOf="@id/gLLeftMargin"
+                    app:layout_constraintRight_toRightOf="@id/gLRightMargin"
+                    app:layout_constraintTop_toBottomOf="@id/iVBorder2" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iVHost"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="16dp"
+                    app:radiusImageFromUrl="@{productInfo.host_image_url}"
+                    app:radiusValue="@{100}"
+                    android:src="@drawable/profile"
+                    app:layout_constraintDimensionRatio="h, 1:1"
+                    app:layout_constraintLeft_toLeftOf="@id/gLLeftMargin"
+                    app:layout_constraintTop_toBottomOf="@id/tVHost"
+                    app:layout_constraintWidth_percent="0.08" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tVHostName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="@{productInfo.host_title}"
+                    app:layout_constraintBottom_toBottomOf="@id/iVHost"
+                    app:layout_constraintLeft_toRightOf="@id/iVHost"
+                    app:layout_constraintRight_toRightOf="@id/gLRightMargin"
+                    app:layout_constraintTop_toTopOf="@id/iVHost" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tVHostDesc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@{productInfo.host_body}"
+                    app:layout_constraintLeft_toLeftOf="@id/gLLeftMargin"
+                    app:layout_constraintRight_toRightOf="@id/gLRightMargin"
+                    app:layout_constraintTop_toBottomOf="@id/iVHost" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iVBorder3"
+                    android:layout_width="0dp"
+                    android:layout_height="1.5dp"
+                    android:layout_marginTop="22dp"
+                    android:background="@color/color_e6e6e6"
+                    app:layout_constraintLeft_toLeftOf="@id/gLLeftMargin"
+                    app:layout_constraintRight_toRightOf="@id/gLRightMargin"
+                    app:layout_constraintTop_toBottomOf="@id/tVHostDesc" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tVHostReview"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp"
+                    android:text="호스트 후기"
+                    app:layout_constraintLeft_toLeftOf="@id/gLLeftMargin"
+                    app:layout_constraintRight_toRightOf="@id/gLRightMargin"
+                    app:layout_constraintTop_toBottomOf="@id/iVBorder3" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnHostReview"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:formatName='@{"S0005"}'
+                    app:formatText="@{productInfo.host_likes}"
+                    app:layout_constraintHeight_percent="0.08"
+                    app:layout_constraintLeft_toLeftOf="@id/gLLeftMargin"
+                    app:layout_constraintRight_toRightOf="@id/gLRightMargin"
+                    app:layout_constraintTop_toBottomOf="@id/tVHostReview" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="22dp"
+                    android:background="@color/color_e6e6e6"
+                    app:layout_constraintLeft_toLeftOf="@id/gLLeftMargin"
+                    app:layout_constraintRight_toRightOf="@id/gLRightMargin"
+                    app:layout_constraintTop_toBottomOf="@id/btnHostReview" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

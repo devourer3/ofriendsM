@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+apply plugin: "androidx.navigation.safeargs.kotlin"
 
 android {
     compileSdkVersion 29
@@ -57,6 +58,7 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
 
+
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
@@ -67,9 +69,6 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
 
 
-    implementation "androidx.room:room-ktx:$roomVersion"
-    implementation "androidx.room:room-runtime:$roomVersion"
-
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion"
 
@@ -77,6 +76,18 @@ dependencies {
     implementation "androidx.paging:paging-runtime:2.1.1"
     implementation "androidx.work:work-runtime-ktx:2.3.2"
     implementation "com.google.android.material:material:1.1.0"
+
+    // Room
+    implementation "androidx.room:room-ktx:$roomVersion"
+    implementation "androidx.room:room-runtime:$roomVersion"
+    kapt "androidx.room:room-compiler:$roomVersion"
+
+    // Extensions = ViewModel + LiveData
+//    implementation "android.arch.lifecycle:extensions:1.1.1"
+//    kapt "android.arch.lifecycle:compiler:1.1.1"
+// Room
+//    implementation "android.arch.persistence.room:runtime:1.1.1"
+//    kapt "android.arch.persistence.room:compiler:1.1.1"
 
 
     // Dagger
@@ -105,7 +116,6 @@ dependencies {
 
     implementation "com.facebook.stetho:stetho:$stethoVersion"
     implementation "com.facebook.stetho:stetho-okhttp3:$stethoVersion"
-
 
 
     // Dependencies for local unit tests

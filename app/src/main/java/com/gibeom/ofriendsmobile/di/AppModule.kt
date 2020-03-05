@@ -1,12 +1,15 @@
 package com.gibeom.ofriendsmobile.di
 
-import android.content.Context
+import android.app.Application
 import com.facebook.stetho.okhttp3.StethoInterceptor
 import com.gibeom.ofriendsmobile.BuildConfig
-import com.gibeom.ofriendsmobile.api.OfriendsService
+import com.gibeom.ofriendsmobile.data.local.AppDatabase
+import com.gibeom.ofriendsmobile.data.remote.OfriendsService
 import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -16,6 +19,17 @@ import javax.inject.Singleton
 
 @Module(includes = [ViewModelModule::class])
 class AppModule {
+
+    @Provides
+    fun provideCoroutineScopeIO() = CoroutineScope(Dispatchers.IO)
+
+    @Singleton
+    @Provides
+    fun provideDatabase(app: Application) = AppDatabase.getInstance(app)
+
+    @Singleton
+    @Provides
+    fun provideOfriendsDao(db: AppDatabase) = db.ofriendsDao()
 
     @Singleton
     @Provides

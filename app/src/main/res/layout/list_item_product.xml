@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
     <data>
         <import type="android.view.View"/>
         <variable
-            name="risingLife"
-            type="com.gibeom.ofriendsmobile.home.data.RisingLife" />
+            name="product"
+            type="com.gibeom.ofriendsmobile.home.data.Product" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -17,25 +16,35 @@
         android:layout_marginLeft="12dp"
         android:layout_marginRight="12dp">
 
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.2"
+            />
+
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/iVRiImage"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:scaleType="centerCrop"
-            app:radiusImageFromUrl="@{risingLife.image_link}"
+            app:radiusImageFromUrl="@{product.image_link}"
+            app:radiusValue="@{20}"
             app:layout_constraintDimensionRatio="1:0.75"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatCheckBox
-            android:layout_width="12dp"
-            android:layout_height="12dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginRight="12dp"
+            android:id="@+id/cBLike"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintWidth_percent="0.1"
+            app:layout_constraintDimensionRatio="1:1"
             android:background="@drawable/like"
             android:button="@null"
-            android:checked="false"
+            android:checked="@{product.like > 0 ? true : false}"
             app:layout_constraintRight_toRightOf="@id/iVRiImage"
             app:layout_constraintTop_toTopOf="@id/iVRiImage" />
 
@@ -45,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/noto"
-            android:text="@{risingLife.catchPhrase}"
+            android:text="@{product.catchPhrase}"
             android:textColor="@color/color_b1b1b1"
             android:textSize="@dimen/catch_phrase"
             app:layout_constraintLeft_toLeftOf="@id/iVRiImage"
@@ -57,7 +66,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:fontFamily="@font/noto"
-            android:text="@{risingLife.title}"
+            android:text="@{product.title}"
             android:textColor="@color/color_212121"
             android:textSize="@dimen/title"
             android:textStyle="bold"
@@ -70,11 +79,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
             android:fontFamily="@font/noto"
-            android:text="@{risingLife.price}"
-            android:visibility='@{risingLife.price == "0" ? View.GONE : View.VISIBLE}'
             android:textColor="@color/color_212121"
             android:textSize="@dimen/price"
+            android:visibility='@{product.price == 0 ? View.GONE : View.VISIBLE}'
             android:textStyle="bold"
+            app:setMoney='@{product.price}'
             app:layout_constraintLeft_toLeftOf="@id/tVRiTitle"
             app:layout_constraintTop_toBottomOf="@id/tVRiTitle" />
 

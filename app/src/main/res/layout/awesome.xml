@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
+
+    <data>
+        <import type="android.view.View"/>
+        <import type="com.gibeom.ofriendsmobile.data.Result"/>
+        <variable
+            name="vmHome"
+            type="com.gibeom.ofriendsmobile.home.ui.HomeViewModel" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
@@ -8,11 +17,27 @@
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/vPMainBanner"
             android:layout_width="0dp"
-            android:layout_height="180dp"
+            android:layout_height="0dp"
             android:layout_marginTop="20dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            app:layout_constraintDimensionRatio="h, 1:0.52"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/pBMainBanner"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:isLoading="@{vmHome.getAwesomeNetworkStatus()}"
+            app:layout_constraintWidth_percent="0.12"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintLeft_toLeftOf="@id/vPMainBanner"
+            app:layout_constraintRight_toRightOf="@id/vPMainBanner"
+            app:layout_constraintTop_toTopOf="@id/vPMainBanner"
+            app:layout_constraintBottom_toBottomOf="@id/vPMainBanner" />
+
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tLIndicator"
@@ -34,6 +59,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:gravity="center"
+            android:nestedScrollingEnabled="false"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -68,11 +94,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
+            android:nestedScrollingEnabled="false"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tVRisingLife"
             app:spanCount="2" />
+
+        <ProgressBar
+            android:id="@+id/pBRisingPrd"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="32dp"
+            app:isLoading="@{vmHome.getAwesomeNetworkStatus()}"
+            app:layout_constraintWidth_percent="0.15"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tVRisingLife"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
