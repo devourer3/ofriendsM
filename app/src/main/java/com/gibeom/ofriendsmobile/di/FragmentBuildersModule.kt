@@ -1,8 +1,8 @@
 package com.gibeom.ofriendsmobile.di
 
 import com.gibeom.ofriendsmobile.home.ui.HomeFragment
-import com.gibeom.ofriendsmobile.home.ui.ProductDetailFragment
-import com.gibeom.ofriendsmobile.home.ui.PromoFragment
+import com.gibeom.ofriendsmobile.productdetail.ui.ProductDetailFragment
+import com.gibeom.ofriendsmobile.promo.ui.PromoFragment
 import com.gibeom.ofriendsmobile.like.ui.LikeFragment
 import com.gibeom.ofriendsmobile.more.ui.MoreFragment
 import dagger.Module

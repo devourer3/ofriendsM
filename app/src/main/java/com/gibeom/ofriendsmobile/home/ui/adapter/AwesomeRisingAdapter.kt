@@ -16,24 +16,22 @@ import javax.inject.Inject
 class AwesomeRisingAdapter
 @Inject constructor(private val homeViewModel: HomeViewModel) :
     ListAdapter<Product, AwesomeRisingAdapter.ViewHolder>(
-        RisingLifeDiffCallback()
-    ) {
+        RisingLifeDiffCallback()) {
     inner class ViewHolder(private val binding: ListItemProductBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(item: Product) {
             binding.apply {
                 product = item
-            }
-
-            binding.cBLike.setOnClickListener {
-                homeViewModel.likeAction(item, item.id)
-            }
-            binding.root.setOnClickListener {
-                val action = HomeFragmentDirections.actionHomeFragmentToProductDetailFragment(
-                    id = item.id,
-                    isInternal = true
-                )
-                it.findNavController().navigate(action)
+                cBLike.setOnClickListener {
+                    homeViewModel.likeAction(item, item.id)
+                }
+                root.setOnClickListener {
+                    val action = HomeFragmentDirections.actionHomeFragmentToProductDetailFragment(
+                        id = item.id,
+                        isInternal = true
+                    )
+                    it.findNavController().navigate(action)
+                }
             }
         }
     }

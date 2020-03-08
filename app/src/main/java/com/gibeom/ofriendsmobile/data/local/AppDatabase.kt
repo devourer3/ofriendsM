@@ -4,11 +4,10 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 import com.gibeom.ofriendsmobile.home.data.Product
 
-@Database(entities = [Product::class], version = 2, exportSchema = true)
+@Database(entities = [Product::class], version = 1, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun ofriendsDao(): OfriendsDao
@@ -40,9 +39,6 @@ abstract class AppDatabase : RoomDatabase() {
                     }
                     override fun onCreate(db: SupportSQLiteDatabase) {
                         super.onCreate(db)
-                    }
-                    override fun onDestructiveMigration(db: SupportSQLiteDatabase) {
-                        super.onDestructiveMigration(db)
                     }
                 })
 //                .addMigrations(migration_1_2)

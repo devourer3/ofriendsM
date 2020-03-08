@@ -128,7 +128,7 @@ fun bindRenderHtml(view: TextView, description: String?) {
 }
 
 @BindingAdapter("formatName", "formatText", requireAll = false)
-fun bindTextFormat(view: TextView, formatName: String?, formatText: Any) {
+fun bindTextFormat(view: TextView, formatName: String?, formatText: Any? = "") {
     val res: Resources = view.context.resources
     val format = res.getIdentifier(formatName, "string", view.context.packageName)
     view.text = view.context.getString(format, formatText.toString())

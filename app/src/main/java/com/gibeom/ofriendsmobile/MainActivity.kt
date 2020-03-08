@@ -4,10 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.Observer
 import androidx.navigation.NavController
-import androidx.navigation.findNavController
-import androidx.navigation.ui.*
 import com.gibeom.ofriendsmobile.utils.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.android.DispatchingAndroidInjector
@@ -26,6 +23,7 @@ class MainActivity : AppCompatActivity(), HasSupportFragmentInjector {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         if (savedInstanceState == null) {
             setupBottomNavigationBar()
         }
@@ -52,7 +50,6 @@ class MainActivity : AppCompatActivity(), HasSupportFragmentInjector {
 
 //        navController.setGraph(R.navigation.ofriends)
 
-
         // Set up BottomNav
 //        NavigationUI.setupWithNavController(bottomNav, navController)
     }
@@ -63,13 +60,18 @@ class MainActivity : AppCompatActivity(), HasSupportFragmentInjector {
     }
 
     override fun onSupportNavigateUp(): Boolean {
+
         return currentNavController?.value?.navigateUp() ?: false
+
 //        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
     private fun setupBottomNavigationBar() {
+
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_nav)
+
         val navGraphIds = listOf(R.navigation.home, R.navigation.like, R.navigation.more)
+
         // Setup the bottom navigation view with a list of navigation graphs
         val controller = bottomNavigationView.setupWithNavController(
             navGraphIds = navGraphIds,
@@ -86,6 +88,7 @@ class MainActivity : AppCompatActivity(), HasSupportFragmentInjector {
 //        controller.observe(this, Observer {
 //            setupActionBarWithNavController(it)
 //        })
+
         currentNavController = controller
     }
 

@@ -1,4 +1,4 @@
-package com.gibeom.ofriendsmobile.home.ui
+package com.gibeom.ofriendsmobile.productdetail.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -15,7 +15,7 @@ import androidx.navigation.fragment.navArgs
 import com.gibeom.ofriendsmobile.databinding.FragmentProductDetailBinding
 import com.gibeom.ofriendsmobile.di.Injectable
 import com.gibeom.ofriendsmobile.di.injectViewModel
-import com.gibeom.ofriendsmobile.home.ui.adapter.ProductDetailBannerAdapter
+import com.gibeom.ofriendsmobile.productdetail.ui.adapter.ProductDetailBannerAdapter
 import javax.inject.Inject
 
 /**
@@ -73,7 +73,10 @@ class ProductDetailFragment : Fragment(), Injectable {
                 binding.productInfo = it
                 binding.vPDetailBanner.apply {
                     clipToPadding = false
-                    adapter = ProductDetailBannerAdapter(it?.imageList)
+                    adapter =
+                        ProductDetailBannerAdapter(
+                            it?.imageList
+                        )
                 }
             })
         } else {
@@ -87,7 +90,8 @@ class ProductDetailFragment : Fragment(), Injectable {
             }
             binding.wVEvent.apply{
                 settings.let { webSetting }
-                webViewClient = MyWebClient()
+                webViewClient =
+                    MyWebClient()
                 loadUrl(args.url)
             }
         }

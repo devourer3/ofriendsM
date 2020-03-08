@@ -1,4 +1,4 @@
-package com.gibeom.ofriendsmobile.home.ui.adapter
+package com.gibeom.ofriendsmobile.productdetail.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.View

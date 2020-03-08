@@ -1,8 +1,9 @@
-package com.gibeom.ofriendsmobile.home.ui
+package com.gibeom.ofriendsmobile.productdetail.ui
 
 import androidx.lifecycle.*
 import com.gibeom.ofriendsmobile.data.Result
-import com.gibeom.ofriendsmobile.home.data.*
+import com.gibeom.ofriendsmobile.productdetail.data.ProductDetail
+import com.gibeom.ofriendsmobile.repository.ProductDetailRepository
 import javax.inject.Inject
 
 class ProductDetailViewModel

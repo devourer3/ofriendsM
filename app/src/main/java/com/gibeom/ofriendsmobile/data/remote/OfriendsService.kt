@@ -2,7 +2,7 @@ package com.gibeom.ofriendsmobile.data.remote
 
 import com.gibeom.ofriendsmobile.home.data.Main
 import com.gibeom.ofriendsmobile.home.data.Product
-import com.gibeom.ofriendsmobile.home.data.ProductDetail
+import com.gibeom.ofriendsmobile.productdetail.data.ProductDetail
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path

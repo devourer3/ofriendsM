@@ -3,8 +3,9 @@ package com.gibeom.ofriendsmobile.di
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.gibeom.ofriendsmobile.home.ui.HomeViewModel
-import com.gibeom.ofriendsmobile.home.ui.ProductDetailViewModel
-import com.gibeom.ofriendsmobile.home.ui.PromoViewModel
+import com.gibeom.ofriendsmobile.like.ui.LikeViewModel
+import com.gibeom.ofriendsmobile.productdetail.ui.ProductDetailViewModel
+import com.gibeom.ofriendsmobile.promo.data.PromoViewModel
 
 import dagger.Binds
 import dagger.Module
@@ -28,6 +29,11 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(ProductDetailViewModel::class)
     abstract fun bindProductDetailViewModel(viewModel: ProductDetailViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(LikeViewModel::class)
+    abstract fun bindLikeViewModel(viewModel: LikeViewModel): ViewModel
 
     @Binds
     abstract fun bindViewModelFactory(factory: ViewModelFactory): ViewModelProvider.Factory

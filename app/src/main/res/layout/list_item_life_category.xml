@@ -25,7 +25,7 @@
             android:paddingLeft="12dp"
             android:paddingRight="12dp"
             android:text="@{category.title}"
-            android:onClick='@{() -> hmVM.setSelectedMinorLifeTab(pos, "[0,19]", category.filter)}'
+            android:onClick='@{() -> hmVM.setSelectedMinorLifeTab(pos, category.filter)}'
             android:textColor="@color/color_ffffff"
             app:setWhRadBackground="@{hmVM.selectedLifeMinorTab == pos ? true : false}"
             app:setLcTextColor="@{hmVM.selectedLifeMinorTab == pos ? true : false}"

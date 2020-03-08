@@ -45,6 +45,8 @@
     <string name="S0005">%s개 후기 모두 보기</string>
     <string name="S0006">지금 뜨는 라이프 %s</string>
     <string name="S0007">유효기간 구매일로부터 90일</string>
+    <string name="S0008">내가 찜한 라이프 %s</string>
+    <string name="S0009">찜한 라이프가 없습니다.</string>
 
 
 

@@ -19,24 +19,20 @@
     </fragment>
     <fragment
         android:id="@+id/promoFragment"
-        android:name="com.gibeom.ofriendsmobile.home.ui.PromoFragment"
+        android:name="com.gibeom.ofriendsmobile.promo.ui.PromoFragment"
         android:label="fragment_promo"
         tools:layout="@layout/fragment_promo" >
         <action
-            android:id="@+id/action_promoFragment_to_productDetailFragment2"
+            android:id="@+id/action_promoFragment_to_productDetailFragment"
             app:destination="@id/productDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/productDetailFragment"
-        android:name="com.gibeom.ofriendsmobile.home.ui.ProductDetailFragment"
+        android:name="com.gibeom.ofriendsmobile.productdetail.ui.ProductDetailFragment"
         android:label="fragment_home_detail"
         tools:layout="@layout/fragment_product_detail">
         <argument android:name="id" android:defaultValue="0" app:argType="integer" />
         <argument android:name="url" android:defaultValue="0" app:argType="string" />
         <argument android:name="isInternal" android:defaultValue="false" app:argType="boolean" />
     </fragment>
-    <action
-        android:id="@+id/action_promoFragment_to_productDetailFragment"
-        app:destination="@id/productDetailFragment" />
-
 </navigation>

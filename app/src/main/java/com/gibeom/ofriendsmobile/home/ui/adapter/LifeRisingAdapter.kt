@@ -9,17 +9,35 @@ import androidx.recyclerview.widget.RecyclerView
 import com.gibeom.ofriendsmobile.databinding.ListItemProductBinding
 import com.gibeom.ofriendsmobile.home.data.Product
 import com.gibeom.ofriendsmobile.home.ui.HomeFragmentDirections
+import com.gibeom.ofriendsmobile.home.ui.HomeViewModel
+import com.gibeom.ofriendsmobile.promo.data.PromoViewModel
+import com.gibeom.ofriendsmobile.promo.ui.PromoFragmentDirections
 import timber.log.Timber
 
-class LifeRisingAdapter :
+class LifeRisingAdapter
+constructor(
+    private val homeViewModel: HomeViewModel? = null,
+    private val promoViewModel: PromoViewModel? = null) :
     PagedListAdapter<Product, LifeRisingAdapter.ViewHolder>(
-        RisingLifeDiffCallback()
-    ) {
-
-    class ViewHolder(private val binding: ListItemProductBinding) :
+        RisingLifeDiffCallback()) {
+    inner class ViewHolder(private val binding: ListItemProductBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(item: Product) {
-            binding.product = item
+            binding.apply {
+                binding.product = item
+                cBLike.setOnClickListener {
+                    homeViewModel?.likeAction(item, item.id)
+                    promoViewModel?.likeAction(item, item.id)
+                }
+                root.setOnClickListener {
+                    val action = if(homeViewModel != null) {
+                        HomeFragmentDirections.actionHomeFragmentToProductDetailFragment(id = item.id, isInternal = true)
+                    } else {
+                        PromoFragmentDirections.actionPromoFragmentToProductDetailFragment(id = item.id, isInternal = true)
+                    }
+                    it.findNavController().navigate(action)
+                }
+            }
         }
     }
 

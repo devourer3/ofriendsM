@@ -11,7 +11,9 @@ import javax.inject.Inject
 class OfriendsApp: Application(), HasAndroidInjector {
     @Inject
     lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Any>
+
     override fun androidInjector(): AndroidInjector<Any> = dispatchingAndroidInjector
+
     override fun onCreate() {
         super.onCreate()
         if (BuildConfig.DEBUG) Timber.plant(Timber.DebugTree())

@@ -5,10 +5,10 @@
     <data>
         <variable
             name="vMDetail"
-            type="com.gibeom.ofriendsmobile.home.ui.ProductDetailViewModel" />
+            type="com.gibeom.ofriendsmobile.productdetail.ui.ProductDetailViewModel" />
         <variable
             name="productInfo"
-            type="com.gibeom.ofriendsmobile.home.data.ProductInfo" />
+            type="com.gibeom.ofriendsmobile.productdetail.data.ProductInfo" />
 
         <import type="androidx.core.content.ContextCompat"/>
 
@@ -55,7 +55,7 @@
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:context=".home.ui.ProductDetailFragment">
+                tools:context=".productdetail.ui.ProductDetailFragment">
 
                 <androidx.constraintlayout.widget.Guideline
                     android:id="@+id/gLLeftMargin"
@@ -207,8 +207,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    formatName='@{"S0004"}'
-                    formatText="@{productInfo.rating}"
+                    app:formatName='@{"S0004"}'
+                    app:formatText="@{productInfo.rating}"
                     app:layout_constraintBottom_toBottomOf="@id/iVStar"
                     app:layout_constraintLeft_toRightOf="@id/iVStar"
                     app:layout_constraintTop_toTopOf="@id/iVStar" />

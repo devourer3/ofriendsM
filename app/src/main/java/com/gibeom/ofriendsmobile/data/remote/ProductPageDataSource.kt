@@ -1,22 +1,26 @@
-package com.gibeom.ofriendsmobile.home.data
+package com.gibeom.ofriendsmobile.data.remote
 
 import androidx.paging.PageKeyedDataSource
 import com.gibeom.ofriendsmobile.data.Result
+import com.gibeom.ofriendsmobile.data.local.OfriendsDao
+import com.gibeom.ofriendsmobile.home.data.Product
 import com.gibeom.ofriendsmobile.home.ui.HomeViewModel
-import com.gibeom.ofriendsmobile.home.ui.PromoViewModel
+import com.gibeom.ofriendsmobile.promo.data.PromoViewModel
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 import timber.log.Timber
 import javax.inject.Inject
 
 class ProductPageDataSource
 @Inject constructor(
     private val scope: CoroutineScope,
-    private val dataSource: HomeRemoteDataSource,
+    private val dataSource: ProductListRemoteDataSource,
     private val query: String? = "",
     private val promoViewModel: PromoViewModel?,
-    private val homeViewModel: HomeViewModel?
+    private val homeViewModel: HomeViewModel?,
+    private val dao: OfriendsDao
 ) : PageKeyedDataSource<Int, Product>() {
     override fun loadInitial(
         params: LoadInitialParams<Int>,
@@ -45,8 +49,7 @@ class ProductPageDataSource
         page: Int,
         pageSize: Int,
         query: String?,
-        callback: (List<Product>) -> Unit
-    ) {
+        callback: (List<Product>) -> Unit) {
         // 비동기 API CALL
         scope.launch(getJobErrorHandler()) {
             val response =
@@ -54,15 +57,15 @@ class ProductPageDataSource
             when (response.status) {
                 Result.Status.SUCCESS -> {
                     postStatus(Result.Status.SUCCESS)
-                    val itemSize: String? =
-                        response.headers?.get("Content-Range")?.split('/')?.get(1) ?: ""
-                    promoViewModel?.setTotalItem(itemSize!!)
+                    val itemSize: String = response.headers?.get("Content-Range")?.split('/')?.get(1) ?: ""
+                    promoViewModel?.setTotalItem(itemSize)
                     val results = response.data!!
                     results.forEach { item ->
                         // PagedList 값 수정이 불가능 해, DataSource에서 수정해야 하는 이유
                         // https://stackoverflow.com/questions/53243704/modifying-pagedlist-in-android-paging-architecture-library
                         item.image_link =
                             "https://static.ofriends.co.kr/images/products/" + item.id + "_0.jpg"
+                        item.like = isLike(item.id)
                     }
                     callback(results)
                 }
@@ -71,6 +74,12 @@ class ProductPageDataSource
                 }
                 else -> postStatus(Result.Status.LOADING)
             }
+        }
+    }
+
+    private fun isLike(id: Int) = runBlocking {
+        dao.getProductId(id).let { count ->
+            return@let count
         }
     }
 

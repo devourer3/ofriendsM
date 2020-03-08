@@ -33,8 +33,13 @@ class AppModule {
 
     @Singleton
     @Provides
-    fun provideOfriendsService(okhttpClient: OkHttpClient, converterFactory: GsonConverterFactory)
-            = provideService(okhttpClient, converterFactory, OfriendsService::class.java, OfriendsService.END_POINT)
+    fun provideOfriendsService(okhttpClient: OkHttpClient, converterFactory: GsonConverterFactory) =
+        provideService(
+            okhttpClient,
+            converterFactory,
+            clazz = OfriendsService::class.java,
+            baseUrl = OfriendsService.END_POINT
+        )
 
     @Provides
     fun provideOkHttpClient(interceptor: HttpLoggingInterceptor): OkHttpClient =
@@ -49,7 +54,10 @@ class AppModule {
 
     @Provides
     fun provideLoggingInterceptor() =
-        HttpLoggingInterceptor().apply { level = if (BuildConfig.DEBUG) HttpLoggingInterceptor.Level.BODY else HttpLoggingInterceptor.Level.NONE }
+        HttpLoggingInterceptor().apply {
+            level =
+                if (BuildConfig.DEBUG) HttpLoggingInterceptor.Level.BODY else HttpLoggingInterceptor.Level.NONE
+        }
 
     @Provides
     @Singleton
@@ -60,17 +68,20 @@ class AppModule {
     fun provideGsonConverterFactory(gson: Gson): GsonConverterFactory =
         GsonConverterFactory.create(gson)
 
-    private fun <T> provideService(okhttpClient: OkHttpClient,
-                                   converterFactory: GsonConverterFactory,
-                                   clazz: Class<T>,
-                                   baseUrl: String): T {
+    private fun <T> provideService(
+        okhttpClient: OkHttpClient,
+        converterFactory: GsonConverterFactory,
+        clazz: Class<T>,
+        baseUrl: String
+    ): T {
         return createRetrofit(okhttpClient, converterFactory, baseUrl).create(clazz)
     }
 
     private fun createRetrofit(
         okhttpClient: OkHttpClient,
         converterFactory: GsonConverterFactory,
-        baseUrl: String): Retrofit {
+        baseUrl: String
+    ): Retrofit {
         return Retrofit.Builder()
             .baseUrl(baseUrl)
             .client(okhttpClient)

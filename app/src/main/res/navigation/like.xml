@@ -8,5 +8,20 @@
         android:id="@+id/likeFragment"
         android:name="com.gibeom.ofriendsmobile.like.ui.LikeFragment"
         android:label="@string/main_life"
-        tools:layout="@layout/fragment_like" />
+        tools:layout="@layout/fragment_like" >
+        <action
+            android:id="@+id/action_likeFragment_to_likeDetailFragment"
+            app:destination="@id/likeDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/likeDetailFragment"
+        android:name="com.gibeom.ofriendsmobile.productdetail.ui.ProductDetailFragment"
+        android:label="fragment_home_detail"
+        tools:layout="@layout/fragment_product_detail">
+        <argument android:name="id" android:defaultValue="0" app:argType="integer" />
+        <argument android:name="url" android:defaultValue="0" app:argType="string" />
+        <argument android:name="isInternal" android:defaultValue="false" app:argType="boolean" />
+    </fragment>
+
 </navigation>

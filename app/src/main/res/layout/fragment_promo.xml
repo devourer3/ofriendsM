@@ -6,13 +6,13 @@
 
         <variable
             name="vMPr"
-            type="com.gibeom.ofriendsmobile.home.ui.PromoViewModel" />
+            type="com.gibeom.ofriendsmobile.promo.data.PromoViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".home.ui.PromoFragment">
+        tools:context=".promo.ui.PromoFragment">
 
         <include
             android:id="@+id/iCPromoTB"
@@ -25,24 +25,18 @@
             android:orientation="horizontal"
             app:layout_constraintGuide_begin="56dp" />
 
-        <androidx.core.widget.NestedScrollView
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rVPromo"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:descendantFocusability="blocksDescendants"
+            android:nestedScrollingEnabled="false"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/gLToolbar">
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rVPromo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:spanCount="2" />
-
-        </androidx.core.widget.NestedScrollView>
+            app:layout_constraintTop_toBottomOf="@id/gLToolbar"
+            app:spanCount="2" />
 
         <ProgressBar
             android:layout_width="0dp"
