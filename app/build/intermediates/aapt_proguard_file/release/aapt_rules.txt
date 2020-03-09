@@ -1,32 +1,32 @@
 # Referenced at /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/merged_manifests/release/AndroidManifest.xml:17
 -keep class androidx.core.app.CoreComponentFactory { <init>(); }
-# Referenced at /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/merged_manifests/release/AndroidManifest.xml:129
+# Referenced at /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/merged_manifests/release/AndroidManifest.xml:130
 -keep class androidx.lifecycle.ProcessLifecycleOwnerInitializer { <init>(); }
-# Referenced at /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/merged_manifests/release/AndroidManifest.xml:125
+# Referenced at /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/merged_manifests/release/AndroidManifest.xml:126
 -keep class androidx.room.MultiInstanceInvalidationService { <init>(); }
-# Referenced at /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/merged_manifests/release/AndroidManifest.xml:36
+# Referenced at /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/merged_manifests/release/AndroidManifest.xml:37
 -keep class androidx.work.impl.WorkManagerInitializer { <init>(); }
-# Referenced at /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/merged_manifests/release/AndroidManifest.xml:65
+# Referenced at /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/merged_manifests/release/AndroidManifest.xml:66
 -keep class androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy { <init>(); }
-# Referenced at /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/merged_manifests/release/AndroidManifest.xml:75
+# Referenced at /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/merged_manifests/release/AndroidManifest.xml:76
 -keep class androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy { <init>(); }
-# Referenced at /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/merged_manifests/release/AndroidManifest.xml:95
+# Referenced at /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/merged_manifests/release/AndroidManifest.xml:96
 -keep class androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy { <init>(); }
-# Referenced at /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/merged_manifests/release/AndroidManifest.xml:85
+# Referenced at /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/merged_manifests/release/AndroidManifest.xml:86
 -keep class androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy { <init>(); }
-# Referenced at /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/merged_manifests/release/AndroidManifest.xml:115
+# Referenced at /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/merged_manifests/release/AndroidManifest.xml:116
 -keep class androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver { <init>(); }
-# Referenced at /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/merged_manifests/release/AndroidManifest.xml:104
+# Referenced at /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/merged_manifests/release/AndroidManifest.xml:105
 -keep class androidx.work.impl.background.systemalarm.RescheduleReceiver { <init>(); }
-# Referenced at /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/merged_manifests/release/AndroidManifest.xml:43
+# Referenced at /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/merged_manifests/release/AndroidManifest.xml:44
 -keep class androidx.work.impl.background.systemalarm.SystemAlarmService { <init>(); }
-# Referenced at /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/merged_manifests/release/AndroidManifest.xml:48
+# Referenced at /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/merged_manifests/release/AndroidManifest.xml:49
 -keep class androidx.work.impl.background.systemjob.SystemJobService { <init>(); }
-# Referenced at /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/merged_manifests/release/AndroidManifest.xml:54
+# Referenced at /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/merged_manifests/release/AndroidManifest.xml:55
 -keep class androidx.work.impl.foreground.SystemForegroundService { <init>(); }
-# Referenced at /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/merged_manifests/release/AndroidManifest.xml:60
+# Referenced at /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/merged_manifests/release/AndroidManifest.xml:61
 -keep class androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver { <init>(); }
-# Referenced at /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/merged_manifests/release/AndroidManifest.xml:26
+# Referenced at /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/merged_manifests/release/AndroidManifest.xml:27
 -keep class com.gibeom.ofriendsmobile.MainActivity { <init>(); }
 # Referenced at /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/merged_manifests/release/AndroidManifest.xml:17
 -keep class com.gibeom.ofriendsmobile.OfriendsApp { <init>(); }

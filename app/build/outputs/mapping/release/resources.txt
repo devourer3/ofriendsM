@@ -4744,8 +4744,6 @@ drawable:navigation_empty_icon:2131230872 => [dimen:design_navigation_icon_size:
 drawable:tooltip_frame_dark:2131230888 => [color:tooltip_background_dark:2131099855, dimen:tooltip_corner_radius:2131165519]
 drawable:tooltip_frame_light:2131230889 => [color:tooltip_background_light:2131099856, dimen:tooltip_corner_radius:2131165519]
 menu:bottom_nav:2131623936 => [string:home:2131951678, drawable:ic_home:2131230844, string:like:2131951680, drawable:ic_heart:2131230843, string:more:2131951684, drawable:ic_more:2131230851]
-mipmap:ic_launcher:2131689472 => [drawable:ic_launcher_background:2131230847, drawable:ic_launcher_foreground:2131230848]
-mipmap:ic_launcher_round:2131689473 => [drawable:ic_launcher_background:2131230847, drawable:ic_launcher_foreground:2131230848]
 animator:mtrl_card_state_list_anim:2130837509 => [integer:mtrl_card_anim_duration_ms:2131427345, interpolator:mtrl_fast_out_slow_in:2131492872, integer:mtrl_card_anim_delay_ms:2131427344, dimen:mtrl_card_dragged_z:2131165430, anim:mtrl_card_lowers_interpolator:2130772005]
 animator:mtrl_extended_fab_change_size_motion_spec:2130837511 => [interpolator:mtrl_fast_out_slow_in:2131492872]
 animator:mtrl_extended_fab_hide_motion_spec:2130837512 => [interpolator:mtrl_linear:2131492873]
@@ -6662,8 +6660,7 @@ layout:notification_action:2131558485,
    string:path_password_strike_through:2131951726,
    string:toolbar_search_hint:2131951729,
    menu:bottom_nav:2131623936,
-   mipmap:ic_launcher_round:2131689473,
-   mipmap:ic_of_launcher:2131689474,
+   mipmap:ic_launcher:2131689472,
    raw:cat:2131886080,
    raw:learn:2131886081,
    raw:life_cat:2131886082,
@@ -6904,6 +6901,7 @@ Skipped unused resource res/color/mtrl_tabs_icon_color_selector_colored.xml: 500
 Skipped unused resource res/color/mtrl_tabs_ripple_color.xml: 1672 bytes (replaced with small dummy file of size 104 bytes)
 Skipped unused resource res/drawable/design_fab_background.xml: 372 bytes (replaced with small dummy file of size 104 bytes)
 Skipped unused resource res/drawable/design_snackbar_background.xml: 484 bytes (replaced with small dummy file of size 104 bytes)
+Skipped unused resource res/drawable/ic_launcher_background.xml: 5696 bytes (replaced with small dummy file of size 104 bytes)
 Skipped unused resource res/drawable/ic_menu_arrow_up_black_24dp.xml: 668 bytes (replaced with small dummy file of size 104 bytes)
 Skipped unused resource res/drawable/ic_mtrl_checked_circle.xml: 672 bytes (replaced with small dummy file of size 104 bytes)
 Skipped unused resource res/drawable/ic_ofriends.xml: 3532 bytes (replaced with small dummy file of size 104 bytes)
@@ -6912,6 +6910,7 @@ Skipped unused resource res/drawable/mtrl_ic_error.xml: 644 bytes (replaced with
 Skipped unused resource res/drawable/mtrl_popupmenu_background.xml: 740 bytes (replaced with small dummy file of size 104 bytes)
 Skipped unused resource res/drawable/mtrl_popupmenu_background_dark.xml: 740 bytes (replaced with small dummy file of size 104 bytes)
 Skipped unused resource res/drawable-v23/mtrl_popupmenu_background_dark.xml: 1228 bytes (replaced with small dummy file of size 104 bytes)
+Skipped unused resource res/drawable-v24/ic_launcher_foreground.xml: 1572 bytes (replaced with small dummy file of size 104 bytes)
 Skipped unused resource res/interpolator/mtrl_linear.xml: 132 bytes (replaced with small dummy file of size 104 bytes)
 Skipped unused resource res/layout/abc_action_bar_up_container.xml: 440 bytes (replaced with small dummy file of size 104 bytes)
 Skipped unused resource res/layout/abc_activity_chooser_view.xml: 1684 bytes (replaced with small dummy file of size 104 bytes)
@@ -6937,12 +6936,6 @@ Skipped unused resource res/layout/mtrl_picker_text_input_date.xml: 984 bytes (r
 Skipped unused resource res/layout/mtrl_picker_text_input_date_range.xml: 1460 bytes (replaced with small dummy file of size 104 bytes)
 Skipped unused resource res/layout-sw600dp-v13/design_layout_snackbar.xml: 528 bytes (replaced with small dummy file of size 104 bytes)
 Skipped unused resource res/layout-sw600dp-v13/mtrl_layout_snackbar.xml: 528 bytes (replaced with small dummy file of size 104 bytes)
-Skipped unused resource res/mipmap-mdpi-v4/ic_launcher.png: 2561 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource res/mipmap-hdpi-v4/ic_launcher.png: 3340 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource res/mipmap-xhdpi-v4/ic_launcher.png: 4648 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource res/mipmap-xxhdpi-v4/ic_launcher.png: 7268 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource res/mipmap-xxxhdpi-v4/ic_launcher.png: 9602 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource res/mipmap-anydpi-v26/ic_launcher.xml: 448 bytes (replaced with small dummy file of size 104 bytes)
 Skipped unused resource res/raw/promo.json: 7429 bytes (replaced with small dummy file of size 0 bytes)
 Skipped unused resource res/xml/standalone_badge.xml: 268 bytes (replaced with small dummy file of size 104 bytes)
 Skipped unused resource res/xml/standalone_badge_gravity_bottom_end.xml: 312 bytes (replaced with small dummy file of size 104 bytes)

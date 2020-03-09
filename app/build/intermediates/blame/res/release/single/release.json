@@ -32,36 +32,32 @@
         "source": "/Users/gibeom/.gradle/caches/transforms-2/files-2.1/99f8f056009941e996972a85e76a489c/material-1.1.0/res/layout/design_navigation_menu_item.xml"
     },
     {
-        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/layout_abc_list_menu_item_layout.xml.flat",
-        "source": "/Users/gibeom/.gradle/caches/transforms-2/files-2.1/b31f10a2627b56512b73f5382f007683/appcompat-1.1.0/res/layout/abc_list_menu_item_layout.xml"
-    },
-    {
         "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/drawable-mdpi-v4_abc_ic_star_half_black_48dp.png.flat",
         "source": "/Users/gibeom/.gradle/caches/transforms-2/files-2.1/b31f10a2627b56512b73f5382f007683/appcompat-1.1.0/res/drawable-mdpi-v4/abc_ic_star_half_black_48dp.png"
     },
     {
-        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/layout_mtrl_calendar_day.xml.flat",
-        "source": "/Users/gibeom/.gradle/caches/transforms-2/files-2.1/99f8f056009941e996972a85e76a489c/material-1.1.0/res/layout/mtrl_calendar_day.xml"
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/layout_abc_list_menu_item_layout.xml.flat",
+        "source": "/Users/gibeom/.gradle/caches/transforms-2/files-2.1/b31f10a2627b56512b73f5382f007683/appcompat-1.1.0/res/layout/abc_list_menu_item_layout.xml"
     },
     {
         "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/drawable-xhdpi-v4_abc_ic_star_half_black_16dp.png.flat",
         "source": "/Users/gibeom/.gradle/caches/transforms-2/files-2.1/b31f10a2627b56512b73f5382f007683/appcompat-1.1.0/res/drawable-xhdpi-v4/abc_ic_star_half_black_16dp.png"
     },
     {
-        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/drawable-xxxhdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
-        "source": "/Users/gibeom/.gradle/caches/transforms-2/files-2.1/b31f10a2627b56512b73f5382f007683/appcompat-1.1.0/res/drawable-xxxhdpi-v4/abc_ic_menu_share_mtrl_alpha.png"
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/layout_mtrl_calendar_day.xml.flat",
+        "source": "/Users/gibeom/.gradle/caches/transforms-2/files-2.1/99f8f056009941e996972a85e76a489c/material-1.1.0/res/layout/mtrl_calendar_day.xml"
     },
     {
-        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/layout_abc_tooltip.xml.flat",
-        "source": "/Users/gibeom/.gradle/caches/transforms-2/files-2.1/b31f10a2627b56512b73f5382f007683/appcompat-1.1.0/res/layout/abc_tooltip.xml"
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/drawable-xxxhdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
+        "source": "/Users/gibeom/.gradle/caches/transforms-2/files-2.1/b31f10a2627b56512b73f5382f007683/appcompat-1.1.0/res/drawable-xxxhdpi-v4/abc_ic_menu_share_mtrl_alpha.png"
     },
     {
         "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/drawable-xxxhdpi-v4_design_ic_visibility.png.flat",
         "source": "/Users/gibeom/.gradle/caches/transforms-2/files-2.1/99f8f056009941e996972a85e76a489c/material-1.1.0/res/drawable-xxxhdpi-v4/design_ic_visibility.png"
     },
     {
-        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/mipmap-xhdpi_ic_of_launcher.png.flat",
-        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/mipmap-xhdpi/ic_of_launcher.png"
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/layout_abc_tooltip.xml.flat",
+        "source": "/Users/gibeom/.gradle/caches/transforms-2/files-2.1/b31f10a2627b56512b73f5382f007683/appcompat-1.1.0/res/layout/abc_tooltip.xml"
     },
     {
         "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/color_mtrl_btn_text_color_selector.xml.flat",
@@ -100,16 +96,16 @@
         "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/raw/cat.json"
     },
     {
-        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/drawable-xxhdpi-v4_abc_ic_star_black_36dp.png.flat",
-        "source": "/Users/gibeom/.gradle/caches/transforms-2/files-2.1/b31f10a2627b56512b73f5382f007683/appcompat-1.1.0/res/drawable-xxhdpi-v4/abc_ic_star_black_36dp.png"
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/color_mtrl_calendar_selected_range.xml.flat",
+        "source": "/Users/gibeom/.gradle/caches/transforms-2/files-2.1/99f8f056009941e996972a85e76a489c/material-1.1.0/res/color/mtrl_calendar_selected_range.xml"
     },
     {
         "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/drawable-v23_mtrl_popupmenu_background_dark.xml.flat",
         "source": "/Users/gibeom/.gradle/caches/transforms-2/files-2.1/99f8f056009941e996972a85e76a489c/material-1.1.0/res/drawable-v23/mtrl_popupmenu_background_dark.xml"
     },
     {
-        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/color_mtrl_calendar_selected_range.xml.flat",
-        "source": "/Users/gibeom/.gradle/caches/transforms-2/files-2.1/99f8f056009941e996972a85e76a489c/material-1.1.0/res/color/mtrl_calendar_selected_range.xml"
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/drawable-xxhdpi-v4_abc_ic_star_black_36dp.png.flat",
+        "source": "/Users/gibeom/.gradle/caches/transforms-2/files-2.1/b31f10a2627b56512b73f5382f007683/appcompat-1.1.0/res/drawable-xxhdpi-v4/abc_ic_star_black_36dp.png"
     },
     {
         "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/menu_bottom_nav.xml.flat",
@@ -124,12 +120,12 @@
         "source": "/Users/gibeom/.gradle/caches/transforms-2/files-2.1/b31f10a2627b56512b73f5382f007683/appcompat-1.1.0/res/color/abc_background_cache_hint_selector_material_light.xml"
     },
     {
-        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/drawable-mdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
-        "source": "/Users/gibeom/.gradle/caches/transforms-2/files-2.1/b31f10a2627b56512b73f5382f007683/appcompat-1.1.0/res/drawable-mdpi-v4/abc_ic_menu_share_mtrl_alpha.png"
-    },
-    {
         "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/drawable-mdpi-v4_abc_text_select_handle_right_mtrl_dark.png.flat",
         "source": "/Users/gibeom/.gradle/caches/transforms-2/files-2.1/b31f10a2627b56512b73f5382f007683/appcompat-1.1.0/res/drawable-mdpi-v4/abc_text_select_handle_right_mtrl_dark.png"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/drawable-mdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
+        "source": "/Users/gibeom/.gradle/caches/transforms-2/files-2.1/b31f10a2627b56512b73f5382f007683/appcompat-1.1.0/res/drawable-mdpi-v4/abc_ic_menu_share_mtrl_alpha.png"
     },
     {
         "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/drawable-xxxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
@@ -156,12 +152,12 @@
         "source": "/Users/gibeom/.gradle/caches/transforms-2/files-2.1/b31f10a2627b56512b73f5382f007683/appcompat-1.1.0/res/drawable-ldrtl-hdpi-v17/abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
-        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/layout_notification_template_big_media_narrow_custom.xml.flat",
-        "source": "/Users/gibeom/.gradle/caches/transforms-2/files-2.1/f392f6c23b2bb924e031fd922de437e9/media-1.0.0/res/layout/notification_template_big_media_narrow_custom.xml"
-    },
-    {
         "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/drawable_ic_menu_arrow_up_black_24dp.xml.flat",
         "source": "/Users/gibeom/.gradle/caches/transforms-2/files-2.1/99f8f056009941e996972a85e76a489c/material-1.1.0/res/drawable/ic_menu_arrow_up_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/layout_notification_template_big_media_narrow_custom.xml.flat",
+        "source": "/Users/gibeom/.gradle/caches/transforms-2/files-2.1/f392f6c23b2bb924e031fd922de437e9/media-1.0.0/res/layout/notification_template_big_media_narrow_custom.xml"
     },
     {
         "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/anim_design_snackbar_out.xml.flat",
@@ -528,10 +524,6 @@
         "source": "/Users/gibeom/.gradle/caches/transforms-2/files-2.1/99f8f056009941e996972a85e76a489c/material-1.1.0/res/drawable/ic_edit_black_24dp.xml"
     },
     {
-        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
-    },
-    {
         "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/drawable-xxhdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
         "source": "/Users/gibeom/.gradle/caches/transforms-2/files-2.1/b31f10a2627b56512b73f5382f007683/appcompat-1.1.0/res/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_dark.9.png"
     },
@@ -542,10 +534,6 @@
     {
         "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/drawable-xhdpi-v4_abc_ic_star_half_black_48dp.png.flat",
         "source": "/Users/gibeom/.gradle/caches/transforms-2/files-2.1/b31f10a2627b56512b73f5382f007683/appcompat-1.1.0/res/drawable-xhdpi-v4/abc_ic_star_half_black_48dp.png"
-    },
-    {
-        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
     },
     {
         "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/drawable-v21_abc_btn_colored_material.xml.flat",
@@ -868,10 +856,6 @@
         "source": "/Users/gibeom/.gradle/caches/transforms-2/files-2.1/99f8f056009941e996972a85e76a489c/material-1.1.0/res/layout-sw600dp-v13/mtrl_layout_snackbar.xml"
     },
     {
-        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
-    },
-    {
         "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/layout_mtrl_picker_actions.xml.flat",
         "source": "/Users/gibeom/.gradle/caches/transforms-2/files-2.1/99f8f056009941e996972a85e76a489c/material-1.1.0/res/layout/mtrl_picker_actions.xml"
     },
@@ -1102,10 +1086,6 @@
     {
         "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/layout_abc_dialog_title_material.xml.flat",
         "source": "/Users/gibeom/.gradle/caches/transforms-2/files-2.1/b31f10a2627b56512b73f5382f007683/appcompat-1.1.0/res/layout/abc_dialog_title_material.xml"
-    },
-    {
-        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
         "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/drawable-xxhdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
@@ -2100,10 +2080,6 @@
         "source": "/Users/gibeom/.gradle/caches/transforms-2/files-2.1/b31f10a2627b56512b73f5382f007683/appcompat-1.1.0/res/drawable-xxhdpi-v4/abc_list_longpressed_holo.9.png"
     },
     {
-        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
-    },
-    {
         "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/drawable-hdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
         "source": "/Users/gibeom/.gradle/caches/transforms-2/files-2.1/b31f10a2627b56512b73f5382f007683/appcompat-1.1.0/res/drawable-hdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png"
     },
@@ -2134,10 +2110,6 @@
     {
         "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/drawable-ldrtl-mdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "/Users/gibeom/.gradle/caches/transforms-2/files-2.1/b31f10a2627b56512b73f5382f007683/appcompat-1.1.0/res/drawable-ldrtl-mdpi-v17/abc_spinner_mtrl_am_alpha.9.png"
-    },
-    {
-        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
     },
     {
         "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/layout_notification_template_part_chronometer.xml.flat",
@@ -2302,10 +2274,6 @@
     {
         "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/drawable-ldrtl-xxhdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "/Users/gibeom/.gradle/caches/transforms-2/files-2.1/b31f10a2627b56512b73f5382f007683/appcompat-1.1.0/res/drawable-ldrtl-xxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png"
-    },
-    {
-        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
     },
     {
         "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/release/drawable_ic_ofriends.xml.flat",
