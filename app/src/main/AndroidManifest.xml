@@ -8,12 +8,12 @@
   <application
 	  android:name=".OfriendsApp"
 	  android:allowBackup="true"
-	  android:icon="@mipmap/ic_of_launcher"
+	  android:icon="@mipmap/ic_launcher"
 	  android:label="@string/app_name"
-	  android:roundIcon="@mipmap/ic_launcher_round"
 	  android:supportsRtl="true"
 	  android:theme="@style/AppTheme">
-	<activity
+<!--	  android:roundIcon="@mipmap/ic_of_launcher"-->
+	  <activity
 		android:name=".MainActivity"
 		android:theme="@style/AppTheme.NoActionBar"
 		>

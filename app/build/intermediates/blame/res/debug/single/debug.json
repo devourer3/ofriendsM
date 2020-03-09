@@ -16,10 +16,6 @@
         "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/raw/main.json"
     },
     {
-        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
-    },
-    {
         "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/raw_share.json.flat",
         "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/raw/share.json"
     },
@@ -28,16 +24,8 @@
         "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/drawable/ic_more.xml"
     },
     {
-        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
-    },
-    {
         "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/raw_life_cat.json.flat",
         "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/raw/life_cat.json"
-    },
-    {
-        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
     },
     {
         "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/drawable_bottomsheet_top_corner.xml.flat",
@@ -58,14 +46,6 @@
     {
         "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/layout_list_item_banner.xml.flat",
         "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/layout/list_item_banner.xml"
-    },
-    {
-        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
-    },
-    {
-        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
         "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
@@ -114,10 +94,6 @@
     {
         "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/layout_toolbar_navigate.xml.flat",
         "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/layout/toolbar_navigate.xml"
-    },
-    {
-        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
     },
     {
         "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/menu_bottom_nav.xml.flat",
@@ -210,10 +186,6 @@
     {
         "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/drawable_bottom_border.xml.flat",
         "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/drawable/bottom_border.xml"
-    },
-    {
-        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
         "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/layout_fragment_product_detail.xml.flat",

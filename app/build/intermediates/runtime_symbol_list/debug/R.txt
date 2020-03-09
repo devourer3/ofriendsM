@@ -2028,7 +2028,6 @@ int layout toolbar_home 0x7f0d0074
 int layout toolbar_navigate 0x7f0d0075
 int menu bottom_nav 0x7f0e0000
 int mipmap ic_launcher 0x7f0f0000
-int mipmap ic_launcher_round 0x7f0f0001
 int navigation home 0x7f100000
 int navigation like 0x7f100001
 int navigation more 0x7f100002

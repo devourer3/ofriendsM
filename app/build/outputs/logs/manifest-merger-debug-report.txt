@@ -136,21 +136,19 @@ MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /Users/gibeom/.gradle/
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.2.0] /Users/gibeom/.gradle/caches/transforms-2/files-2.1/d37e7f450334742f3eacc44f47e28e41/core-1.2.0/AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/AndroidManifest.xml:14:4-30
+		ADDED from /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/AndroidManifest.xml:13:4-30
 	android:label
 		ADDED from /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/AndroidManifest.xml:12:4-36
-	android:roundIcon
-		ADDED from /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/AndroidManifest.xml:13:4-49
 	android:icon
 		ADDED from /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/AndroidManifest.xml:11:4-38
 	android:allowBackup
 		ADDED from /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/AndroidManifest.xml:10:4-30
 	android:theme
-		ADDED from /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/AndroidManifest.xml:15:4-35
+		ADDED from /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/AndroidManifest.xml:14:4-35
 	android:name
 		ADDED from /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/AndroidManifest.xml:9:4-31
 activity#com.gibeom.ofriendsmobile.MainActivity
-ADDED from /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/AndroidManifest.xml:16:2-25:13
+ADDED from /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/AndroidManifest.xml:16:4-25:13
 	android:theme
 		ADDED from /Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/AndroidManifest.xml:18:3-46
 	android:name

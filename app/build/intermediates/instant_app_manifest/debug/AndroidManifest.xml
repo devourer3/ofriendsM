@@ -3,7 +3,7 @@
     package="com.gibeom.ofriendsmobile"
     android:targetSandboxVersion="2"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.0.0.1" >
 
     <uses-sdk
         android:minSdkVersion="21"
@@ -22,10 +22,11 @@
         android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+
+        <!-- android:roundIcon="@mipmap/ic_of_launcher" -->
         <activity
             android:name="com.gibeom.ofriendsmobile.MainActivity"
             android:theme="@style/AppTheme.NoActionBar" >
