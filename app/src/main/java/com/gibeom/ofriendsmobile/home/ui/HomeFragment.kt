@@ -1,11 +1,14 @@
 package com.gibeom.ofriendsmobile.home.ui
 
-import android.content.Context
 import android.os.Bundle
+import android.view.KeyEvent
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.EditorInfo
+import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.observe
 import androidx.navigation.fragment.findNavController
@@ -14,7 +17,9 @@ import com.gibeom.ofriendsmobile.databinding.FragmentHomeBinding
 import com.gibeom.ofriendsmobile.di.Injectable
 import com.gibeom.ofriendsmobile.di.injectViewModel
 import com.gibeom.ofriendsmobile.home.ui.adapter.*
-import timber.log.Timber
+import com.gibeom.ofriendsmobile.utils.hideKeyboard
+import com.google.android.material.bottomsheet.BottomSheetBehavior
+import kotlinx.android.synthetic.main.toolbar_home.view.*
 import javax.inject.Inject
 
 /**
@@ -33,10 +38,15 @@ class HomeFragment : Fragment(), Injectable {
     private lateinit var viewModel: HomeViewModel
     private lateinit var binding: FragmentHomeBinding
 
-    private val cAdapter: CategoryAdapter by lazy { CategoryAdapter(viewModel) } // 라이프 - 메이저 탭 어댑터
-    private val lLAdatper: LifeCategoryAdapter by lazy { LifeCategoryAdapter(viewModel) } // 라이프 - 마이너 탭 어댑터
+    private lateinit var bottomSheetBehavior: BottomSheetBehavior<ConstraintLayout>
+
+    private val cAdapter: CategoryAdapter by lazy { CategoryAdapter(viewModel) } // 라이프, 메이저 탭 어댑터 - 리스트 어댑터
+    private val lLAdatper: LifeCategoryAdapter by lazy { LifeCategoryAdapter(viewModel) } // 라이프, 마이너 탭 어댑터 - 리스트 어댑터
+
     private val rAdapterAwesome: AwesomeRisingAdapter by lazy { AwesomeRisingAdapter(viewModel) } // 멋진 - 리스트 어댑터
+
     private val lAdapter: LifeRisingAdapter by lazy { LifeRisingAdapter(homeViewModel = viewModel) } // 라이프 - 페이지드 리스트 어댑터
+    private val sAdapter: LifeRisingAdapter by lazy { LifeRisingAdapter(homeViewModel = viewModel) } // 검색결과 - 페이지드 리스트 어댑터
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -45,9 +55,6 @@ class HomeFragment : Fragment(), Injectable {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         viewModel = injectViewModel(viewModelFactory)
         return binding.root
-        // context ?: binding.root
-        // Inflate the layout for this fragment
-//    return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -57,20 +64,53 @@ class HomeFragment : Fragment(), Injectable {
         subscribeUi()
     }
 
-    private fun setListener() {
-        binding.iCawesome.tVRiseEntire.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_promoFragment)
-        }
-    }
-
     private fun bind() {
+        bottomSheetBehavior = BottomSheetBehavior.from(binding.cLBottomSheet)
         binding.lifecycleOwner = viewLifecycleOwner
         binding.iCLife.vmHome = viewModel
         binding.iCawesome.vmHome = viewModel
         binding.homeVm = viewModel
+        binding.iCNoContent.noContentFormat = "S0011"
     }
 
+    private fun setListener() {
+        binding.aBHome.main_toolbar.eTSearch.setOnEditorActionListener(object : TextView.OnEditorActionListener{
+            override fun onEditorAction(view: TextView?, action: Int, event: KeyEvent?): Boolean {
+                if(action == EditorInfo.IME_ACTION_SEARCH) {
+                    val viewText = view?.text.toString()
+                    if(viewText.isBlank() || viewText.isEmpty()) return false
+                    viewModel.setSearchQuery(viewText)
+                    hideKeyboard(view)
+                    binding.cLBottomSheet.visibility = View.VISIBLE
+                    bottomSheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
+                    return true
+                }
+                return false
+            }
+        })
+
+        binding.iCawesome.tVRiseEntire.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_promoFragment)
+        }
+//        bottomSheetBehavior.addBottomSheetCallback(object : BottomSheetBehavior.BottomSheetCallback() {
+//            override fun onSlide(bottomSheet: View, slideOffset: Float) {
+//            }
+//
+//            override fun onStateChanged(bottomSheet: View, newState: Int) {
+//            }
+//        })
+    }
+
+
+
     private fun subscribeUi() {
+
+        viewModel.searchQueryItems.observe(viewLifecycleOwner) {
+            binding.rVSearch.apply {
+                adapter = sAdapter
+                sAdapter.submitList(it)
+            }
+        }
 
         viewModel.getAwesomeCategory().observe(viewLifecycleOwner) {
             binding.iCawesome.rVCategory.apply {
@@ -113,7 +153,7 @@ class HomeFragment : Fragment(), Injectable {
         }
 
         viewModel.lifeQuery.observe(viewLifecycleOwner) {
-            viewModel.queryItems.observe(viewLifecycleOwner) {
+            viewModel.lifeQueryItems.observe(viewLifecycleOwner) {
                 binding.iCLife.rVFilteredPrd.apply {
                     adapter = lAdapter
                     itemAnimator = null
@@ -121,6 +161,7 @@ class HomeFragment : Fragment(), Injectable {
                 }
             }
         }
+
     }
 
     override fun onDestroyView() {
@@ -128,11 +169,5 @@ class HomeFragment : Fragment(), Injectable {
 
 
     }
-
-    // TODO: Rename method, update argument and hook method into UI event
-//    fun onButtonPressed(uri: Uri) {
-//        listener?.onFragmentInteraction(uri)
-//    }
-
 
 }

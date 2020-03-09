@@ -7,6 +7,7 @@ import com.gibeom.ofriendsmobile.data.Result
 import com.gibeom.ofriendsmobile.home.data.*
 import com.gibeom.ofriendsmobile.repository.ProductListRepository
 import com.gibeom.ofriendsmobile.utils.rawJsonToList
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 import kotlinx.coroutines.*
 import timber.log.Timber
 import javax.inject.Inject
@@ -21,6 +22,8 @@ class HomeViewModel
 
     private val mainData: LiveData<Result<Main>> by lazy { repository.observeMainData() }
 
+    var searchTotalNumber: MutableLiveData<String> = MutableLiveData("0")
+
     // https://blog.mindorks.com/livedata-vs-observable-in-android
     // 추천, 라이프 탭
     var selectedTab: MutableLiveData<Int> = MutableLiveData(0)
@@ -31,23 +34,31 @@ class HomeViewModel
     // 라이프 소구분 탭
     var selectedLifeMinorTab: MutableLiveData<Int> = MutableLiveData(-1)
 
-//    var lifeQuery: MutableLiveData<MutableList<String>> =
-//        MutableLiveData(mutableListOf("[0,19]", "{\"cat_major\":\"play\"}"))
-
     var lifeQuery: MutableLiveData<String> = MutableLiveData(("{\"cat_major\":\"play\"}"))
+
+    private var searchQuery: MutableLiveData<String> = MutableLiveData("")
 
 //    private var queryItems = lifeQuery.value?.let { repository.observeFilteredPrd(it, scope, homeViewModel = this) }
 
-    var queryItems = lifeQuery.switchMap { query ->
+    var searchText: MutableLiveData<String> = MutableLiveData("")
+
+    var lifeQueryItems = lifeQuery.switchMap { query ->
         repository.observeFilteredPrd(query, scope, homeViewModel = this)
     }
 
+    var searchQueryItems = searchQuery.switchMap { query ->
+        repository.observeFilteredPrd(query, scope, homeViewModel = this)
+    }
 
     var lifeNetworkStatus: MutableLiveData<String> = MutableLiveData("LOADING")
 
     fun getAwesomeNetworkStatus() = mainData.map { it.status.toString() }
 
     fun getLifeNetworkStatus() = lifeNetworkStatus.map { it }
+
+    fun setSearchTotalNumber(value: String?) {
+        searchTotalNumber.postValue(value ?: "0")
+    }
 
     fun setSelectedTab(value: Int) {
         selectedTab.postValue(value)
@@ -106,10 +117,6 @@ class HomeViewModel
         return@map prd
     }
 
-//    fun setSelectedTab(value: Int) {
-//        selectedTab.postValue(value)
-//    }
-
     fun setSelectedMajorLifeTab(value: Int, cate: String) {
         selectedTab.postValue(1)
         selectedLifeMajorTab.postValue(value)
@@ -120,6 +127,11 @@ class HomeViewModel
     fun setSelectedMinorLifeTab(value: Int, cate: String) {
         selectedLifeMinorTab.postValue(value)
         lifeQuery.postValue("{\"cat_minor\":\"$cate\"}")
+    }
+
+    fun setSearchQuery(search: String) {
+        searchText.postValue(search)
+        searchQuery.postValue("{\"q\":\"$search\"}")
     }
 
     // 라이프 탭의 아이템 리스트

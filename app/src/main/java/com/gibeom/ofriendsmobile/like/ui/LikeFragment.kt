@@ -62,14 +62,12 @@ class LikeFragment : Fragment(), Injectable {
 
     private fun subscribeUi() {
         viewModel.observeLocalProduct().observe(viewLifecycleOwner) {
-            Timber.w("SIZE: ${it.size}")
             binding.total = it.size
             binding.rVLike.apply {
                 adapter = pAdapter
                 pAdapter.submitList(it)
             }
         }
-
     }
 
 }

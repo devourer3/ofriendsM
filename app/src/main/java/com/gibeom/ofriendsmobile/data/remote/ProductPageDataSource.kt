@@ -58,6 +58,7 @@ class ProductPageDataSource
                 Result.Status.SUCCESS -> {
                     postStatus(Result.Status.SUCCESS)
                     val itemSize: String = response.headers?.get("Content-Range")?.split('/')?.get(1) ?: ""
+                    homeViewModel?.setSearchTotalNumber(itemSize)
                     promoViewModel?.setTotalItem(itemSize)
                     val results = response.data!!
                     results.forEach { item ->
