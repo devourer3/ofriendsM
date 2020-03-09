@@ -1,0 +1,266 @@
+[
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/raw_play.json.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/raw/play.json"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/raw_cat.json.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/raw/cat.json"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/drawable_bottom_border_selected.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/drawable/bottom_border_selected.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/raw_main.json.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/raw/main.json"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/raw_share.json.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/raw/share.json"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/drawable_ic_more.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/drawable/ic_more.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/raw_life_cat.json.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/raw/life_cat.json"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/drawable_bottomsheet_top_corner.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/drawable/bottomsheet_top_corner.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/drawable-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/drawable_awesome_indicator_dot_selected.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/drawable/awesome_indicator_dot_selected.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/layout_awesome.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/layout/awesome.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/layout_list_item_banner.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/layout/list_item_banner.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/layout_list_item_life_category.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/layout/list_item_life_category.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/drawable_ic_search.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/drawable/ic_search.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/drawable_awesome_indicator_dot.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/drawable/awesome_indicator_dot.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/navigation_more.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/navigation/more.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/layout_nocontent.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/layout/nocontent.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/layout_fragment_more.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/layout/fragment_more.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/layout_list_item_category.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/layout/list_item_category.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/layout_list_item_product.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/layout/list_item_product.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/layout_fragment_like.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/layout/fragment_like.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/layout_toolbar_navigate.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/layout/toolbar_navigate.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/menu_bottom_nav.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/menu/bottom_nav.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/drawable_profile.png.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/drawable/profile.png"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/layout_fragment_home.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/layout/fragment_home.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/navigation_like.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/navigation/like.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/drawable_nocontent.png.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/drawable/nocontent.png"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/drawable_ic_back.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/drawable/ic_back.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/drawable_ic_ofriends.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/drawable/ic_ofriends.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/drawable_white_radius_bg.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/drawable/white_radius_bg.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/drawable_ic_home.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/drawable/ic_home.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/font_notosans.otf.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/font/notosans.otf"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/drawable_banner_indicator_dot_default.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/drawable/banner_indicator_dot_default.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/drawable_ic_heart.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/drawable/ic_heart.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/drawable_ic_placeholder.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/drawable/ic_placeholder.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/drawable_bottom_border_unselected.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/drawable/bottom_border_unselected.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/drawable_like_on.png.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/drawable/like_on.png"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/layout_life.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/layout/life.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/layout_toolbar_home.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/layout/toolbar_home.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/drawable_awesome_indicator_dot_default.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/drawable/awesome_indicator_dot_default.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/raw_learn.json.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/raw/learn.json"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/drawable_like.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/drawable/like.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/drawable_bottom_border.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/drawable/bottom_border.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/layout_fragment_product_detail.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/layout/fragment_product_detail.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/layout_fragment_promo.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/layout/fragment_promo.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/drawable_ic_launcher_background.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/drawable_banner_indicator_dot.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/drawable/banner_indicator_dot.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/font_noto.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/font/noto.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/drawable_banner_indicator_dot_selected.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/drawable/banner_indicator_dot_selected.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/navigation_home.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/navigation/home.xml"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/raw_promo.json.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/raw/promo.json"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/drawable_like_off_wh.png.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/drawable/like_off_wh.png"
+    },
+    {
+        "merged": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/res/merged/debug/drawable_ic_under_construction.xml.flat",
+        "source": "/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/src/main/res/drawable/ic_under_construction.xml"
+    }
+]

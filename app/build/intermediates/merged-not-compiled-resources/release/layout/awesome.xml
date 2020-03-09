@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+        
+
+    
+                                          
+                                                              
+                 
+                         
+                                                                     
+           
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:tag="layout/awesome_0">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vPMainBanner"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            app:layout_constraintDimensionRatio="h, 1:0.52"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/pBMainBanner"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:tag="binding_1"                            
+            app:layout_constraintWidth_percent="0.12"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintLeft_toLeftOf="@id/vPMainBanner"
+            app:layout_constraintRight_toRightOf="@id/vPMainBanner"
+            app:layout_constraintTop_toTopOf="@id/vPMainBanner"
+            app:layout_constraintBottom_toBottomOf="@id/vPMainBanner" />
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tLIndicator"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:background="@color/color_ececec"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vPMainBanner"
+            app:tabBackground="@drawable/banner_indicator_dot"
+            app:tabGravity="center"
+            app:tabIndicatorFullWidth="false"
+            app:tabIndicatorHeight="0dp"
+            app:tabPadding="4dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rVCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:nestedScrollingEnabled="false"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tLIndicator"
+            app:spanCount="3" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tVRisingLife"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/S0001"
+            android:textColor="@color/color_000000"
+            android:textSize="@dimen/sub_subject"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rVCategory" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tVRiseEntire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:text="@string/W0001"
+            app:layout_constraintBottom_toTopOf="@id/rVRisingLife"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rVCategory" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rVRisingLife"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:nestedScrollingEnabled="false"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tVRisingLife"
+            app:spanCount="2" />
+
+        <ProgressBar
+            android:id="@+id/pBRisingPrd"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="32dp"
+            android:tag="binding_2"                            
+            app:layout_constraintWidth_percent="0.15"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tVRisingLife"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+         

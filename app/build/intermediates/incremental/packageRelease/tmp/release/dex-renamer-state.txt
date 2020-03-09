@@ -1,0 +1,4 @@
+#Mon Mar 09 11:41:53 KST 2020
+base.0=/Users/gibeom/AndroidStudioProjects/OfriendsMobile/app/build/intermediates/dex/release/shrunkDex/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
