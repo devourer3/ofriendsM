@@ -4,12 +4,14 @@ import android.app.Application
 import androidx.lifecycle.*
 import com.gibeom.ofriendsmobile.R
 import com.gibeom.ofriendsmobile.data.Result
-import com.gibeom.ofriendsmobile.home.data.*
+import com.gibeom.ofriendsmobile.home.data.Category
+import com.gibeom.ofriendsmobile.home.data.LifeCategory
+import com.gibeom.ofriendsmobile.home.data.Main
+import com.gibeom.ofriendsmobile.home.data.Product
 import com.gibeom.ofriendsmobile.repository.ProductListRepository
 import com.gibeom.ofriendsmobile.utils.rawJsonToList
-import com.google.android.material.bottomsheet.BottomSheetBehavior
-import kotlinx.coroutines.*
-import timber.log.Timber
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.runBlocking
 import javax.inject.Inject
 
 // https://tourspace.tistory.com/23
@@ -36,7 +38,7 @@ class HomeViewModel
 
     var lifeQuery: MutableLiveData<String> = MutableLiveData(("{\"cat_major\":\"play\"}"))
 
-    private var searchQuery: MutableLiveData<String> = MutableLiveData("")
+    var searchQuery: MutableLiveData<String> = MutableLiveData("{\"q\":\"\"}")
 
 //    private var queryItems = lifeQuery.value?.let { repository.observeFilteredPrd(it, scope, homeViewModel = this) }
 
@@ -50,7 +52,11 @@ class HomeViewModel
         repository.observeFilteredPrd(query, scope, homeViewModel = this)
     }
 
+    val cateItems: MutableList<Category>? = rawJsonToList(context.applicationContext, R.raw.cat, "category", Category::class.java)
+
     var lifeNetworkStatus: MutableLiveData<String> = MutableLiveData("LOADING")
+
+    var bannerItems = mainData.map { it.data?.banners }
 
     fun getAwesomeNetworkStatus() = mainData.map { it.status.toString() }
 
@@ -64,9 +70,9 @@ class HomeViewModel
         selectedTab.postValue(value)
     }
 
-    fun getBanners() = mainData.map {
-        it.data?.banners
-    }
+//    fun getBanners() = mainData.map {
+//        it.data?.banners
+//    }
 
     private fun isLike(id: Int) = runBlocking {
         repository.getProductId(scope, id).let { count ->
@@ -87,9 +93,9 @@ class HomeViewModel
 
     // https://developer.android.com/topic/libraries/architecture/coroutines
     // 메이저 탭
-    fun getAwesomeCategory(): LiveData<MutableList<Category>> = liveData(scope.coroutineContext) {
-        rawJsonToList(context, R.raw.cat, "category", Category::class.java)
-    }
+//    fun getAwesomeCategory(): LiveData<MutableList<Category>> = liveData(scope.coroutineContext) {
+
+//    }
 
     // 마이너 탭
     fun getLifeTabList(value: Int): LiveData<MutableList<LifeCategory>> {
@@ -103,7 +109,7 @@ class HomeViewModel
 
     private fun getLifeCategory(jsonKey: String): LiveData<MutableList<LifeCategory>> {
         return liveData(scope.coroutineContext) {
-            emit(rawJsonToList(context, R.raw.life_cat, jsonKey, LifeCategory::class.java))
+            emit(rawJsonToList(context.applicationContext, R.raw.life_cat, jsonKey, LifeCategory::class.java))
         }
     }
 

@@ -24,21 +24,22 @@
 -keepnames class kotlinx.coroutines.internal.MainDispatcherFactory {}
 -keepnames class kotlinx.coroutines.CoroutineExceptionHandler {}
 
+#Keep your data class
+-keep class com.gibeom.ofriendsmobile.home.data.** { *; }
+-keep class com.gibeom.ofriendsmobile.productdetail.data.** { *; }
+
+
 # Most of volatile fields are updated with AFU and should not be mangled
 -keepclassmembernames class kotlinx.** {
     volatile <fields>;
 }
-
-
+#
 -keep class com.squareup.okhttp.** { *; }
 -keep interface com.squareup.okhttp.** { *; }
-
 -dontwarn com.squareup.okhttp.**
 -dontwarn okio.**
-
+-dontwarn okhttp3.**
 -keepattributes Signature
 -keepattributes *Annotation*
 -keep class okhttp3.** { *; }
 -keep interface okhttp3.** { *; }
-
--dontwarn okhttp3.**

@@ -22,10 +22,10 @@ data class Category(
     val id: Int,
     @SerializedName("cat_name")
     val name: String,
-    @SerializedName("cat_image")
-    val imageUrl: String,
     @SerializedName("cat_bg")
     val background: String,
+    @SerializedName("cat_image")
+    val imageUrl: String,
     @SerializedName("cat_major")
     val cat: String
 )

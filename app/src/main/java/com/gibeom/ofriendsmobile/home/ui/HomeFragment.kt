@@ -2,13 +2,13 @@ package com.gibeom.ofriendsmobile.home.ui
 
 import android.os.Bundle
 import android.view.KeyEvent
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.observe
 import androidx.navigation.fragment.findNavController
@@ -16,10 +16,13 @@ import com.gibeom.ofriendsmobile.R
 import com.gibeom.ofriendsmobile.databinding.FragmentHomeBinding
 import com.gibeom.ofriendsmobile.di.Injectable
 import com.gibeom.ofriendsmobile.di.injectViewModel
+import com.gibeom.ofriendsmobile.home.data.Category
 import com.gibeom.ofriendsmobile.home.ui.adapter.*
 import com.gibeom.ofriendsmobile.utils.hideKeyboard
+import com.gibeom.ofriendsmobile.utils.rawJsonToList
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import kotlinx.android.synthetic.main.toolbar_home.view.*
+import timber.log.Timber
 import javax.inject.Inject
 
 /**
@@ -40,7 +43,7 @@ class HomeFragment : Fragment(), Injectable {
 
     private lateinit var bottomSheetBehavior: BottomSheetBehavior<ConstraintLayout>
 
-    private val cAdapter: CategoryAdapter by lazy { CategoryAdapter(viewModel) } // 라이프, 메이저 탭 어댑터 - 리스트 어댑터
+    private val cAdapter: CategoryAdapter by lazy { CategoryAdapter(viewModel) } // 멋진 - 메이저 카테고리 어댑터 - 리스트 어댑터
     private val lLAdatper: LifeCategoryAdapter by lazy { LifeCategoryAdapter(viewModel) } // 라이프, 마이너 탭 어댑터 - 리스트 어댑터
 
     private val rAdapterAwesome: AwesomeRisingAdapter by lazy { AwesomeRisingAdapter(viewModel) } // 멋진 - 리스트 어댑터
@@ -59,6 +62,13 @@ class HomeFragment : Fragment(), Injectable {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
+
+        var asdf = rawJsonToList(binding.root.context, R.raw.cat, "category", Category::class.java)
+
+        Timber.d("ASDFFFFF: $asdf")
+
+
         bind()
         setListener()
         subscribeUi()
@@ -112,14 +122,21 @@ class HomeFragment : Fragment(), Injectable {
             }
         }
 
-        viewModel.getAwesomeCategory().observe(viewLifecycleOwner) {
+        viewModel.cateItems?.let {
             binding.iCawesome.rVCategory.apply {
                 adapter = cAdapter
                 cAdapter.submitList(it)
             }
         }
 
-        viewModel.getBanners().observe(viewLifecycleOwner) {
+//        viewModel.getAwesomeCategory().observe(viewLifecycleOwner) {
+//            binding.iCawesome.rVCategory.apply {
+//                adapter = cAdapter
+//                cAdapter.submitList(it)
+//            }
+//        }
+
+        viewModel.bannerItems.observe(viewLifecycleOwner) {
             binding.iCawesome.vPMainBanner.apply {
                 clipToPadding = false
                 pageMargin = 12
@@ -135,6 +152,7 @@ class HomeFragment : Fragment(), Injectable {
             }
         }
 
+        // 라이프 - 메이저 탭 리스
         viewModel.selectedLifeMajorTab.observe(viewLifecycleOwner) {
             viewModel.getLifeTabList(it).observe(viewLifecycleOwner) { it2 ->
                 binding.iCLife.rVLifeList.apply {
@@ -145,6 +163,7 @@ class HomeFragment : Fragment(), Injectable {
             }
         }
 
+        // 라이프 - 마이너 탭 리스트
         viewModel.selectedLifeMinorTab.observe(viewLifecycleOwner) {
             binding.iCLife.rVLifeList.apply {
                 adapter = lLAdatper

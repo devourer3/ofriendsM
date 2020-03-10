@@ -10,20 +10,19 @@ import com.gibeom.ofriendsmobile.databinding.ListItemProductBinding
 import com.gibeom.ofriendsmobile.home.data.Product
 import com.gibeom.ofriendsmobile.home.ui.HomeFragmentDirections
 import com.gibeom.ofriendsmobile.home.ui.HomeViewModel
-import timber.log.Timber
 import javax.inject.Inject
 
 class AwesomeRisingAdapter
-@Inject constructor(private val homeViewModel: HomeViewModel) :
+@Inject constructor(private val viewModel: HomeViewModel) :
     ListAdapter<Product, AwesomeRisingAdapter.ViewHolder>(
         RisingLifeDiffCallback()) {
-    inner class ViewHolder(private val binding: ListItemProductBinding) :
+    class ViewHolder(private val binding: ListItemProductBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: Product) {
+        fun bind(item: Product, viewModel: HomeViewModel) {
             binding.apply {
                 product = item
                 cBLike.setOnClickListener {
-                    homeViewModel.likeAction(item, item.id)
+                    viewModel.likeAction(item, item.id)
                 }
                 root.setOnClickListener {
                     val action = HomeFragmentDirections.actionHomeFragmentToProductDetailFragment(
@@ -53,7 +52,7 @@ class AwesomeRisingAdapter
         val risingLife = getItem(position)
         risingLife?.let {
             holder.apply {
-                bind(risingLife)
+                bind(risingLife, viewModel)
             }
         }
     }

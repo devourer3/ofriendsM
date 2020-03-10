@@ -10,12 +10,10 @@ import com.gibeom.ofriendsmobile.home.data.LifeCategory
 import com.gibeom.ofriendsmobile.home.ui.HomeViewModel
 
 class LifeCategoryAdapter(val viewModel: HomeViewModel) :
-    ListAdapter<LifeCategory, LifeCategoryAdapter.ViewHolder>(
-        DiffCallback()
-    ) {
-    inner class ViewHolder(private val binding: ListItemLifeCategoryBinding) :
+    ListAdapter<LifeCategory, LifeCategoryAdapter.ViewHolder>(DiffCallback()) {
+    class ViewHolder(private val binding: ListItemLifeCategoryBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: LifeCategory, position: Int) {
+        fun bind(item: LifeCategory, position: Int, viewModel: HomeViewModel) {
             binding.apply {
                 binding.hmVM = viewModel
                 pos = position
@@ -38,16 +36,12 @@ class LifeCategoryAdapter(val viewModel: HomeViewModel) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = getItem(position)
         item?.let {
-            holder.bind(it, position)
+            holder.bind(it, position, viewModel)
         }
     }
 }
 
 private class DiffCallback : DiffUtil.ItemCallback<LifeCategory>() {
-
-    override fun getChangePayload(oldItem: LifeCategory, newItem: LifeCategory): Any? {
-        return super.getChangePayload(oldItem, newItem)
-    }
 
     override fun areItemsTheSame(oldItem: LifeCategory, newItem: LifeCategory): Boolean {
         return oldItem.number == newItem.number

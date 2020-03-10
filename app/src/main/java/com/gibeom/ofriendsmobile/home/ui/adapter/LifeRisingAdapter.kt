@@ -12,17 +12,18 @@ import com.gibeom.ofriendsmobile.home.ui.HomeFragmentDirections
 import com.gibeom.ofriendsmobile.home.ui.HomeViewModel
 import com.gibeom.ofriendsmobile.promo.data.PromoViewModel
 import com.gibeom.ofriendsmobile.promo.ui.PromoFragmentDirections
-import timber.log.Timber
 
 class LifeRisingAdapter
 constructor(
     private val homeViewModel: HomeViewModel? = null,
-    private val promoViewModel: PromoViewModel? = null) :
+    private val promoViewModel: PromoViewModel? = null
+) :
     PagedListAdapter<Product, LifeRisingAdapter.ViewHolder>(
-        RisingLifeDiffCallback()) {
-    inner class ViewHolder(private val binding: ListItemProductBinding) :
+        RisingLifeDiffCallback()
+    ) {
+    class ViewHolder(private val binding: ListItemProductBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: Product) {
+        fun bind(item: Product, homeViewModel: HomeViewModel?, promoViewModel: PromoViewModel?) {
             binding.apply {
                 binding.product = item
                 cBLike.setOnClickListener {
@@ -30,10 +31,16 @@ constructor(
                     promoViewModel?.likeAction(item, item.id)
                 }
                 root.setOnClickListener {
-                    val action = if(homeViewModel != null) {
-                        HomeFragmentDirections.actionHomeFragmentToProductDetailFragment(id = item.id, isInternal = true)
+                    val action = if (homeViewModel != null) {
+                        HomeFragmentDirections.actionHomeFragmentToProductDetailFragment(
+                            id = item.id,
+                            isInternal = true
+                        )
                     } else {
-                        PromoFragmentDirections.actionPromoFragmentToProductDetailFragment(id = item.id, isInternal = true)
+                        PromoFragmentDirections.actionPromoFragmentToProductDetailFragment(
+                            id = item.id,
+                            isInternal = true
+                        )
                     }
                     it.findNavController().navigate(action)
                 }
@@ -58,7 +65,7 @@ constructor(
         val risingLife = getItem(position)
         risingLife?.let {
             holder.apply {
-                bind(risingLife)
+                bind(risingLife, homeViewModel, promoViewModel)
             }
         }
     }

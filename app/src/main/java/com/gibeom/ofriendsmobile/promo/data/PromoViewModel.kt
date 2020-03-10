@@ -21,7 +21,7 @@ class PromoViewModel
 
     val query: MutableLiveData<String> = MutableLiveData(("{\"promo\":\"1\"}"))
 
-    // 라이프 탭의 아이템 가져오는 메소드
+    // 라이프 탭의 아이템
     var totalItems = query.value?.let { repository.observeFilteredPrd(it, scope, promoViewModel = this) }
 
     fun getPromoNetworkStatus() = promoNetworkStatus.map {

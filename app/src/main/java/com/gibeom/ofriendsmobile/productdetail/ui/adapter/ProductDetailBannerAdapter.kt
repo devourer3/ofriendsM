@@ -9,8 +9,7 @@ import com.gibeom.ofriendsmobile.utils.bindImageFromUrl
 import kotlinx.android.synthetic.main.list_item_banner.view.*
 
 class ProductDetailBannerAdapter(
-    private val banners: MutableList<String>?
-) : PagerAdapter() {
+    private val banners: MutableList<String>?) : PagerAdapter() {
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         val view = LayoutInflater
             .from(container.context)
